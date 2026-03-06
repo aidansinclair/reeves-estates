@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #F8F4EE;
+  --color-cream-dark: #F0EBE3;
+  --color-charcoal: #1C1C1C;
+  --color-charcoal-light: #2A2A2A;
+  --color-bronze: #B8956A;
+  --color-bronze-light: #C9A97E;
+  --color-bronze-dark: #A07D55;
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Linen texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%231C1C1C' fill-opacity='1'/%3E%3C/svg%3E");
+}
+
+/* Scroll-triggered fade-in */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero fade-in animation */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-in {
+  animation: heroFadeIn 1s ease-out forwards;
+}
+
+.hero-fade-in-delay {
+  animation: heroFadeIn 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.hero-fade-in-delay-2 {
+  animation: heroFadeIn 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
