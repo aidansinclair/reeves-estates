@@ -40,6 +40,12 @@ export default function Navigation() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="tel:7135235577"
+              className="font-body text-base font-semibold tracking-wide text-bronze hover:text-bronze-dark transition-colors"
+            >
+              713-523-5577
+            </a>
           </div>
 
           {/* Mobile toggle */}
@@ -84,6 +90,13 @@ export default function Navigation() {
               {link.label}
             </a>
           ))}
+          <a
+            href="tel:7135235577"
+            onClick={() => setMobileOpen(false)}
+            className="font-body text-base font-semibold tracking-wide text-bronze hover:text-bronze-dark transition-colors"
+          >
+            713-523-5577
+          </a>
         </div>
       </div>
     </nav>

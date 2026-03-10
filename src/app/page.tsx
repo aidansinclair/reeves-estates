@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   useEffect(() => {
@@ -44,6 +45,7 @@ export default function Home() {
       <About />
       <Contact />
       <Footer />
+      <BackToTop />
     </main>
   );
 }

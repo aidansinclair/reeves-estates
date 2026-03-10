@@ -120,7 +120,7 @@ function AccordionItem({ item }: { item: FAQItem }) {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between py-7 text-left cursor-pointer"
       >
-        <span className="font-body text-base md:text-lg text-charcoal/85 pr-4">
+        <span className="text-xl md:text-2xl font-medium text-charcoal/85 pr-4" style={{ fontFamily: "var(--font-playfair)" }}>
           {item.question}
         </span>
         <span
@@ -158,7 +158,7 @@ export default function FAQ() {
         <div className="space-y-12 fade-in-section">
           {faqGroups.map((group, i) => (
             <div key={i}>
-              <h3 className="font-heading text-lg md:text-xl font-medium text-bronze mb-4">
+              <h3 className="font-heading text-2xl md:text-3xl font-medium text-bronze mb-4 text-center">
                 {group.title}
               </h3>
               <div className="border-t border-bronze/10">

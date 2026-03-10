@@ -16,8 +16,8 @@ const rotatingPhrases = [
   "Living Estates",
   "Complete Liquidations",
   "Partial Estates",
-  "On-Site Sales",
-  "Three Generations",
+  "On and Off-Site Sales",
+  "Our 5,000 sq. ft. Showroom",
 ];
 
 const LETTER_STAGGER = 40; // ms between each letter appearing
@@ -97,7 +97,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-charcoal/50" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h1 className="hero-fade-in text-[2.75rem] md:text-[4.5rem] lg:text-[6rem] font-light text-cream tracking-[0.05em] leading-[0.8] mb-2 text-center" style={{ fontFamily: "var(--font-neue-machina)" }}>
+        <h1 className="hero-fade-in text-[2.2rem] md:text-[3.6rem] lg:text-[4.8rem] font-light text-cream tracking-[0.05em] leading-[0.8] mb-2 text-center" style={{ fontFamily: "var(--font-neue-machina)" }}>
           Reeves Estates
         </h1>
         <div className="hero-fade-in w-[60px] h-[1px] bg-bronze mx-auto mb-6" />
@@ -107,15 +107,15 @@ export default function Hero() {
 
         {/* Two-line rotating display */}
         <div className="hero-fade-in-delay mb-12">
-          <h2 className="font-heading text-2xl md:text-4xl lg:text-5xl font-light text-cream tracking-wide mb-3">
+          <h2 className="font-heading text-[2.2rem] md:text-[3.6rem] lg:text-[4.8rem] font-light text-cream tracking-wide leading-[0.8] mb-3">
             Your single source for
           </h2>
           <div
-            className="h-[2.5rem] md:h-[3rem] flex items-center justify-center"
+            className="h-[2.8rem] md:h-[4.4rem] lg:h-[5.6rem] flex items-center justify-center"
             aria-live="polite"
           >
             <span
-              className="text-2xl md:text-3xl lg:text-4xl italic inline-flex"
+              className="text-[2.2rem] md:text-[3.6rem] lg:text-[4.8rem] italic inline-flex leading-[0.8]"
               style={{ fontFamily: "var(--font-libre-baskerville)", color: "#B8956A" }}
             >
               {currentPhrase.split("").map((char, i) => (
@@ -146,18 +146,42 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-fade-in-delay-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#contact"
-            className="px-8 py-3.5 bg-bronze text-cream font-body text-sm tracking-widest uppercase hover:bg-bronze-dark transition-colors"
-          >
-            Schedule a Consultation
-          </a>
+        <div className="hero-fade-in-delay-2 flex flex-col items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="tel:7135235577"
+              className="px-8 py-3.5 bg-bronze text-cream font-body text-sm tracking-widest uppercase hover:bg-bronze-dark transition-colors"
+            >
+              Call Now &nbsp;713-523-5577
+            </a>
+            <a
+              href="mailto:reevesestatesales@gmail.com?subject=Consultation%20Request%20%E2%80%94%20Reeves%20Estates"
+              className="px-8 py-3.5 border border-cream/40 text-cream font-body text-sm tracking-widest uppercase hover:border-bronze hover:text-bronze transition-colors"
+            >
+              Book a Consultation
+            </a>
+          </div>
+
           <a
             href="#how-it-works"
-            className="px-8 py-3.5 border border-cream/40 text-cream font-body text-sm tracking-widest uppercase hover:border-bronze hover:text-bronze transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="flex flex-col items-center gap-2 mt-6 md:mt-12 lg:mt-16 group cursor-pointer"
           >
-            Learn How It Works
+            <span className="font-body text-xs tracking-widest uppercase font-semibold text-cream/60 group-hover:text-cream/90 transition-colors">
+              Learn how we work together
+            </span>
+            <svg
+              className="w-5 h-5 text-cream/50 group-hover:text-cream/80 transition-colors animate-bounce"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
           </a>
         </div>
       </div>
