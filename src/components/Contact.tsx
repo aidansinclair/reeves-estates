@@ -7,14 +7,14 @@ export default function Contact() {
             Get in Touch
           </h2>
           <div className="w-16 h-[1px] bg-bronze mx-auto mb-6" />
-          <p className="font-body text-base text-charcoal/60">
+          <p className="font-body text-base text-charcoal/80">
             Every estate is different. Let&rsquo;s start with a conversation.
           </p>
         </div>
 
         <div className="fade-in-section flex flex-col md:flex-row items-center justify-center gap-12 md:gap-0">
           <div className="flex-1 text-center px-4">
-            <span className="font-body text-xs tracking-widest uppercase text-charcoal/40 block mb-2">
+            <span className="font-body text-xs tracking-widest uppercase text-charcoal/70 block mb-2">
               Phone
             </span>
             <a
@@ -28,7 +28,7 @@ export default function Contact() {
           <div className="hidden md:block w-[1px] h-12 bg-bronze/20 flex-shrink-0" />
 
           <div className="flex-1 text-center px-4">
-            <span className="font-body text-xs tracking-widest uppercase text-charcoal/40 block mb-2">
+            <span className="font-body text-xs tracking-widest uppercase text-charcoal/70 block mb-2">
               Email
             </span>
             <a
@@ -42,7 +42,7 @@ export default function Contact() {
           <div className="hidden md:block w-[1px] h-12 bg-bronze/20 flex-shrink-0" />
 
           <div className="flex-1 text-center px-4">
-            <span className="font-body text-xs tracking-widest uppercase text-charcoal/40 block mb-2">
+            <span className="font-body text-xs tracking-widest uppercase text-charcoal/70 block mb-2">
               Visit
             </span>
             <a

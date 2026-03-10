@@ -106,8 +106,8 @@ export default function Hero() {
         </p>
 
         {/* Two-line rotating display */}
-        <div className="hero-fade-in-delay mb-12 overflow-hidden">
-          <h2 className="font-heading text-[1.6rem] md:text-[3.6rem] lg:text-[4.8rem] font-light text-cream tracking-wide leading-[1] md:leading-[0.8] mb-3 whitespace-nowrap">
+        <div className="hero-fade-in-delay mb-12 overflow-hidden max-w-5xl mx-auto">
+          <h2 className="font-heading text-[1.6rem] md:text-[3.6rem] lg:text-[clamp(3.6rem,4vw,4.8rem)] font-light text-cream tracking-wide leading-[1] md:leading-[0.8] mb-3 whitespace-nowrap">
             Your single source for
           </h2>
           <div
@@ -115,7 +115,7 @@ export default function Hero() {
             aria-live="polite"
           >
             <span
-              className="text-[1.4rem] md:text-[3.6rem] lg:text-[4.8rem] italic inline-flex leading-[0.8]"
+              className="text-[1.4rem] md:text-[3.6rem] lg:text-[clamp(3.6rem,4vw,4.8rem)] italic inline-flex leading-[0.8]"
               style={{ fontFamily: "var(--font-libre-baskerville)", color: "#B8956A" }}
             >
               {currentPhrase.split("").map((char, i) => (
