@@ -17,7 +17,7 @@ const rotatingPhrases = [
   "Complete Liquidations",
   "Partial Estates",
   "On and Off-Site Sales",
-  "Our 5,000 sq. ft. Showroom",
+  "A 5,000 sq. ft. Showroom.",
 ];
 
 const LETTER_STAGGER = 40; // ms between each letter appearing
@@ -111,11 +111,11 @@ export default function Hero() {
             Your single source for
           </h2>
           <div
-            className="h-[2.2rem] md:h-[4.4rem] lg:h-[5.6rem] flex items-center justify-center overflow-hidden"
+            className="h-[2.8rem] md:h-[5.5rem] lg:h-[7rem] flex items-center justify-center overflow-hidden"
             aria-live="polite"
           >
             <span
-              className="text-[1.4rem] md:text-[3.6rem] lg:text-[clamp(3.6rem,4vw,4.8rem)] italic inline-flex leading-[0.8]"
+              className="text-[1.4rem] md:text-[3.6rem] lg:text-[clamp(3.6rem,4vw,4.8rem)] italic inline-flex leading-[1.2]"
               style={{ fontFamily: "var(--font-libre-baskerville)", color: "#B8956A" }}
             >
               {currentPhrase.split("").map((char, i) => (
