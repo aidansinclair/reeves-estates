@@ -95,14 +95,24 @@ export default function Navigation() {
               {link.label}
             </a>
           ))}
-          <a
-            href="tel:7135235577"
-            onClick={() => setMobileOpen(false)}
-            className="font-body text-base font-extrabold tracking-wide hover:text-bronze-dark transition-colors"
-            style={{ color: "#B8956A" }}
-          >
-            713-523-5577
-          </a>
+          <div className="flex gap-3">
+            <a
+              href="tel:7135235577"
+              onClick={() => setMobileOpen(false)}
+              className="flex-1 text-center py-2.5 font-body text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
+              style={{ backgroundColor: "#B8956A" }}
+            >
+              Call
+            </a>
+            <a
+              href="sms:7135235577"
+              onClick={() => setMobileOpen(false)}
+              className="flex-1 text-center py-2.5 font-body text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
+              style={{ backgroundColor: "#B8956A" }}
+            >
+              Text
+            </a>
+          </div>
           <a
             href="#about"
             onClick={() => setMobileOpen(false)}
