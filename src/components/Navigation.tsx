@@ -3,11 +3,9 @@
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Our Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "About Reeves", href: "#about" },
+  { label: "Our Services", href: "#services" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
   { label: "FAQs", href: "#faq" },
 ];
 
@@ -42,9 +40,16 @@ export default function Navigation() {
             ))}
             <a
               href="tel:7135235577"
-              className="font-body text-base font-semibold tracking-wide text-bronze hover:text-bronze-dark transition-colors"
+              className="font-body text-base font-extrabold tracking-wide hover:text-bronze-dark transition-colors"
+              style={{ color: "#B8956A" }}
             >
-              713-523-5577
+              Call or Text 713-523-5577
+</a>
+            <a
+              href="#about"
+              className="font-body text-sm tracking-wide text-charcoal/70 hover:text-bronze transition-colors"
+            >
+              About Reeves
             </a>
           </div>
 
@@ -93,9 +98,17 @@ export default function Navigation() {
           <a
             href="tel:7135235577"
             onClick={() => setMobileOpen(false)}
-            className="font-body text-base font-semibold tracking-wide text-bronze hover:text-bronze-dark transition-colors"
+            className="font-body text-base font-extrabold tracking-wide hover:text-bronze-dark transition-colors"
+            style={{ color: "#B8956A" }}
           >
-            713-523-5577
+            Call or Text
+          </a>
+          <a
+            href="#about"
+            onClick={() => setMobileOpen(false)}
+            className="font-body text-sm tracking-wide text-charcoal/70 hover:text-bronze transition-colors"
+          >
+            About Reeves
           </a>
         </div>
       </div>

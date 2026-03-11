@@ -119,12 +119,12 @@ export default function Hero() {
             Your single source for
           </h2>
           <div
-            className="py-2 md:py-3 flex items-center justify-center"
+            className="py-2 md:py-3 flex items-center justify-center overflow-hidden"
             aria-live="polite"
           >
             <span
-              className="text-2xl md:text-4xl lg:text-5xl italic inline-flex leading-relaxed"
-              style={{ fontFamily: "var(--font-libre-baskerville)", color: "#B8956A" }}
+              className="text-2xl md:text-4xl lg:text-5xl italic inline-flex leading-relaxed overflow-hidden"
+              style={{ fontFamily: "var(--font-libre-baskerville)", color: "#B8956A", clipPath: "inset(0)" }}
             >
               {currentPhrase.split("").map((char, i) => (
                 <span
