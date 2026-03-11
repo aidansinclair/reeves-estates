@@ -101,7 +101,7 @@ export default function Navigation() {
             className="font-body text-base font-extrabold tracking-wide hover:text-bronze-dark transition-colors"
             style={{ color: "#B8956A" }}
           >
-            Call or Text
+            713-523-5577
           </a>
           <a
             href="#about"
