@@ -26,13 +26,14 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image carousel */}
       {images.map((src, i) => (
-        <div
+        <img
           key={src}
-          className="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out"
-          style={{
-            backgroundImage: `url(${src})`,
-            opacity: i === currentImage ? 1 : 0,
-          }}
+          src={src}
+          alt=""
+          loading={i === 0 ? "eager" : "lazy"}
+          fetchPriority={i === 0 ? "high" : "low"}
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
+          style={{ opacity: i === currentImage ? 1 : 0 }}
         />
       ))}
 

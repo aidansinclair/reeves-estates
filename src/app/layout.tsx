@@ -45,6 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable} ${libreBaskerville.variable} ${neueMachina.variable}`}>
+      <head>
+        <link rel="preload" href="/images/hero/Hero-1.webp" as="image" type="image/webp" />
+      </head>
       <body className="antialiased relative z-10">{children}</body>
     </html>
   );
