@@ -17,7 +17,7 @@ const rotatingPhrases = [
   "Complete Liquidations",
   "Partial Estates",
   "On and Off-Site Sales",
-  "A 5,000 sq. ft. Showroom.",
+  "5,000 sq. ft. Showroom",
 ];
 
 const LETTER_STAGGER = 40; // ms between each letter appearing
