@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
 const images = [
   "/images/hero/Hero-1.webp",
   "/images/hero/Hero-2.webp",
@@ -25,12 +26,13 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image carousel */}
       {images.map((src, i) => (
-        <img
+        <div
           key={src}
-          src={src}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
-          style={{ opacity: i === currentImage ? 1 : 0 }}
+          className="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out"
+          style={{
+            backgroundImage: `url(${src})`,
+            opacity: i === currentImage ? 1 : 0,
+          }}
         />
       ))}
 
