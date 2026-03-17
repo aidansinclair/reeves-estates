@@ -39,11 +39,11 @@ export default function Navigation() {
               </a>
             ))}
             <a
-              href="tel:7138991701"
+              href="tel:8324749547"
               className="font-body text-base font-extrabold tracking-wide hover:text-bronze-dark transition-colors"
               style={{ color: "#B8956A" }}
             >
-              Call or Text 713-899-1701
+              Call or Text 832-474-9547
 </a>
             <a
               href="#about"
@@ -97,7 +97,7 @@ export default function Navigation() {
           ))}
           <div className="flex gap-3">
             <a
-              href="tel:7138991701"
+              href="tel:8324749547"
               onClick={() => setMobileOpen(false)}
               className="flex-1 text-center py-2.5 font-body text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
               style={{ backgroundColor: "#B8956A" }}
@@ -105,7 +105,7 @@ export default function Navigation() {
               Call
             </a>
             <a
-              href="sms:7138991701"
+              href="sms:8324749547"
               onClick={() => setMobileOpen(false)}
               className="flex-1 text-center py-2.5 font-body text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
               style={{ backgroundColor: "#B8956A" }}

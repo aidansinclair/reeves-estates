@@ -58,10 +58,10 @@ export default function Hero() {
         <div className="hero-fade-in-delay-2 flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="tel:7138991701"
+              href="tel:8324749547"
               className="px-8 py-3.5 bg-bronze text-cream font-body text-sm tracking-widest uppercase hover:bg-bronze-dark transition-colors"
             >
-              Call Now &nbsp;713-899-1701
+              Call Now &nbsp;832-474-9547
             </a>
             <a
               href="mailto:reevesestatesales@gmail.com?subject=Consultation%20Request%20%E2%80%94%20Reeves%20Estates"
