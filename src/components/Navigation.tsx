@@ -33,7 +33,13 @@ export default function Navigation() {
                 <Tooltip key={link.href}>
                   <TooltipTrigger asChild>
                     <a href={link.href}>
-                      <Button variant="outline" className="border-bronze text-bronze hover:bg-bronze hover:text-white transition-colors duration-300">
+                      <Button
+                        variant="outline"
+                        className="text-charcoal/70 rounded-[5px] transition-all duration-200 hover:text-charcoal"
+                        style={{ border: "1px solid rgba(28, 28, 28, 0.2)" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.08)")}
+                        onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+                      >
                         {link.label}
                       </Button>
                     </a>
@@ -47,7 +53,13 @@ export default function Navigation() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a href="#about">
-                    <Button variant="outline" className="border-bronze text-bronze hover:bg-bronze hover:text-white transition-colors duration-300">
+                    <Button
+                      variant="outline"
+                      className="text-charcoal/70 rounded-[5px] transition-all duration-200 hover:text-charcoal"
+                      style={{ border: "1px solid rgba(28, 28, 28, 0.2)" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.08)")}
+                      onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+                    >
                       About Reeves
                     </Button>
                   </a>
