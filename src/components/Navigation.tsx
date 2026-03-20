@@ -131,7 +131,15 @@ export default function Navigation() {
               className="flex-1 text-center py-2.5 font-body text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
               style={{ backgroundColor: "#B8956A" }}
             >
-              Get in Touch
+              Call
+            </a>
+            <a
+              href="sms:8324749547"
+              onClick={() => setMobileOpen(false)}
+              className="flex-1 text-center py-2.5 font-body text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
+              style={{ backgroundColor: "#B8956A" }}
+            >
+              Text
             </a>
           </div>
           <a
