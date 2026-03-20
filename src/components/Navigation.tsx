@@ -35,9 +35,9 @@ export default function Navigation() {
                     <a href={link.href}>
                       <Button
                         variant="outline"
-                        className="text-charcoal/70 rounded-[5px] transition-all duration-200 hover:text-charcoal"
-                        style={{ border: "1px solid rgba(28, 28, 28, 0.2)" }}
-                        onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.08)")}
+                        className="text-charcoal/70 rounded-[5px] transition-all duration-150"
+                        style={{ border: "1px solid rgba(28, 28, 28, 0.12)" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.06)")}
                         onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                       >
                         {link.label}
@@ -55,9 +55,9 @@ export default function Navigation() {
                   <a href="#about">
                     <Button
                       variant="outline"
-                      className="text-charcoal/70 rounded-[5px] transition-all duration-200 hover:text-charcoal"
-                      style={{ border: "1px solid rgba(28, 28, 28, 0.2)" }}
-                      onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.08)")}
+                      className="text-charcoal/70 rounded-[5px] transition-all duration-150"
+                      style={{ border: "1px solid rgba(28, 28, 28, 0.12)" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.06)")}
                       onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                     >
                       About Reeves
