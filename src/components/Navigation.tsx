@@ -36,7 +36,7 @@ export default function Navigation() {
                       <Button
                         variant="outline"
                         className="text-charcoal/70 rounded-[5px] transition-all duration-150"
-                        style={{ border: "1px solid rgba(28, 28, 28, 0.12)" }}
+                        style={{ border: "1px solid rgba(28, 28, 28, 0.08)" }}
                         onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.06)")}
                         onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                       >
@@ -56,7 +56,7 @@ export default function Navigation() {
                     <Button
                       variant="outline"
                       className="text-charcoal/70 rounded-[5px] transition-all duration-150"
-                      style={{ border: "1px solid rgba(28, 28, 28, 0.12)" }}
+                      style={{ border: "1px solid rgba(28, 28, 28, 0.08)" }}
                       onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.06)")}
                       onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                     >
