@@ -21,9 +21,8 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img src="/images/monogram.svg" alt="Reeves Estates" className="h-10 md:h-12 w-auto" />
-            <img src="/images/wordmark.svg" alt="Reeves Estates" className="h-5 md:h-6 w-auto hidden sm:block" />
+          <a href="#" className="flex items-center">
+            <img src="/images/wordmark.svg" alt="Reeves Estates" className="h-5 md:h-6 w-auto" />
           </a>
 
           {/* Desktop links */}
@@ -67,18 +66,9 @@ export default function Navigation() {
                 </TooltipContent>
               </Tooltip>
 
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a href="tel:8324749547">
-                    <Button className="bg-[#B8956A] hover:bg-[#A6865F] text-white font-extrabold tracking-wide transition-colors duration-300 rounded-md px-4 py-2">
-                      Get in Touch
-                    </Button>
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent className="rounded-full bg-charcoal text-cream border-bronze">
-                  <p>Reach out to us directly!</p>
-                </TooltipContent>
-              </Tooltip>
+              <span className="font-body text-sm font-bold tracking-wide text-charcoal">
+                832-474-9547
+              </span>
             </div>
           </TooltipProvider>
 

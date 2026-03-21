@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
-import PullQuote from "@/components/PullQuote";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import About from "@/components/About";
@@ -40,8 +39,7 @@ export default function Home() {
       <Hero />
       <TrustBar />
       <HowItWorks />
-      <PullQuote />
-      <Services />
+<Services />
       <FAQ />
       <Testimonials />
       <About />

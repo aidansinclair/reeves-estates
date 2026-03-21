@@ -13,9 +13,9 @@ export default function Contact() {
         </div>
 
         <div
-          className="fade-in-section grid grid-cols-1 gap-8 md:grid-cols-[auto_auto_auto] md:justify-center md:items-center md:gap-0"
+          className="fade-in-section grid grid-cols-1 gap-8 md:grid-cols-[auto_auto_auto_auto] md:justify-center md:items-center md:gap-0"
         >
-          <div className="text-center px-10">
+          <div className="text-center px-8">
             <span className="font-body text-xs tracking-widest uppercase text-charcoal/70 block mb-2">
               Phone
             </span>
@@ -27,7 +27,19 @@ export default function Contact() {
             </a>
           </div>
 
-          <div className="text-center px-10 md:border-l md:border-bronze/20">
+          <div className="text-center px-8 md:border-l md:border-bronze/20">
+            <span className="font-body text-xs tracking-widest uppercase text-charcoal/70 block mb-2">
+              Email
+            </span>
+            <a
+              href="mailto:reevesestatesales@gmail.com"
+              className="font-heading text-lg md:text-xl text-bronze hover:text-bronze-dark transition-colors"
+            >
+              reevesestatesales@gmail.com
+            </a>
+          </div>
+
+          <div className="text-center px-8 md:border-l md:border-bronze/20">
             <span className="font-body text-xs tracking-widest uppercase text-charcoal/70 block mb-2">
               Visit
             </span>
@@ -43,7 +55,7 @@ export default function Contact() {
             </a>
           </div>
 
-          <div className="text-center px-10 md:border-l md:border-bronze/20">
+          <div className="text-center px-8 md:border-l md:border-bronze/20">
             <span className="font-body text-xs tracking-widest uppercase text-charcoal/70 block mb-2">
               Schedule
             </span>

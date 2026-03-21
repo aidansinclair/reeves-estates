@@ -62,15 +62,15 @@ export default function Hero() {
               href="tel:8324749547"
               className="px-8 py-3.5 bg-bronze text-cream font-body text-sm tracking-widest uppercase hover:bg-bronze-dark transition-colors rounded-md"
             >
-              Get in Touch
+              Call Now
             </a>
             <button
               data-cal-link="reevesestates-biwok7/secret"
               data-cal-namespace="estate-consultation"
               data-cal-config='{"layout":"month_view"}'
-              className="px-8 py-3.5 text-cream font-body text-sm tracking-widest uppercase hover:text-bronze transition-colors rounded-md cursor-pointer"
+              className="px-8 py-3.5 border border-cream/40 text-cream font-body text-sm tracking-widest uppercase hover:text-bronze transition-colors rounded-md cursor-pointer"
             >
-              Book a Consultation
+              Schedule a Consultation
             </button>
           </div>
 
