@@ -58,12 +58,17 @@ export default function Hero() {
 
         <div className="hero-fade-in-delay-2 flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* Mobile: tap-to-call button */}
             <a
               href="tel:8324749547"
-              className="px-8 py-3.5 bg-bronze text-cream font-body text-sm tracking-widest uppercase hover:bg-bronze-dark transition-colors rounded-md"
+              className="lg:hidden px-8 py-3.5 bg-bronze text-cream font-body text-sm tracking-widest uppercase hover:bg-bronze-dark transition-colors rounded-md"
             >
               Call Now 832-474-9547
             </a>
+            {/* Desktop: plain display text */}
+            <span className="hidden lg:block font-body text-xl font-semibold text-white tracking-widest">
+              832-474-9547
+            </span>
             <button
               data-cal-link="reevesestates-biwok7/secret"
               data-cal-namespace="estate-consultation"
