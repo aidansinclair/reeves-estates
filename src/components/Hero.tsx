@@ -66,7 +66,7 @@ export default function Hero() {
               Call Now 832-474-9547
             </a>
             {/* Desktop: plain display text */}
-            <span className="hidden lg:block font-body text-xl font-semibold text-white tracking-widest">
+            <span className="hidden lg:block font-body text-3xl font-semibold text-white tracking-widest">
               832-474-9547
             </span>
             <button

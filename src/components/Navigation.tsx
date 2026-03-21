@@ -66,7 +66,7 @@ export default function Navigation() {
                 </TooltipContent>
               </Tooltip>
 
-              <span className="font-body text-sm font-bold tracking-wide text-charcoal">
+              <span className="font-body text-base font-bold tracking-wide" style={{ color: "#B8956A" }}>
                 832-474-9547
               </span>
             </div>
