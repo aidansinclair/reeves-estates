@@ -26,7 +26,7 @@ export default function Navigation() {
           </a>
 
           {/* Desktop links */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden 2xl:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -53,7 +53,7 @@ export default function Navigation() {
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden flex flex-col gap-1.5 p-2"
+            className="2xl:hidden flex flex-col gap-1.5 p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -78,7 +78,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 bg-cream/95 backdrop-blur-md ${
+        className={`2xl:hidden overflow-hidden transition-all duration-300 bg-cream/95 backdrop-blur-md ${
           mobileOpen ? "max-h-96" : "max-h-0"
         }`}
       >
