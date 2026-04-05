@@ -31,11 +31,27 @@ const neueMachina = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Reeves Estates | Houston Estate Sales, Buyouts & Liquidations",
+  metadataBase: new URL("https://reevesestates.com"),
+  title: {
+    default: "Reeves Estates | Houston Estate Sales, Buyouts & Liquidations",
+    template: "%s | Reeves Estates",
+  },
   description:
     "Houston's trusted full-service estate specialists. Cash buyouts, estate sales, living estates, and liquidations. Serving River Oaks and greater Houston for three generations. Call today.",
   keywords:
     "Houston estate sales, estate liquidation Houston, cash estate buyout Houston, River Oaks estate sales, living estate Houston, estate executor Houston, antique estate sale Houston, Houston estate specialists",
+  alternates: {
+    canonical: "https://reevesestates.com",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://reevesestates.com",
+    siteName: "Reeves Estates",
+    title: "Reeves Estates | Houston Estate Sales, Buyouts & Liquidations",
+    description:
+      "Houston's trusted full-service estate specialists. Cash buyouts, estate sales, living estates, and liquidations. Serving River Oaks and greater Houston.",
+  },
   verification: {
     google: "0ZvlKynvzOy89HqbicAAppPNQ_u5lx48RIRmIfkUoIo",
   },
