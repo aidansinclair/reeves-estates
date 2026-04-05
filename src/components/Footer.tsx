@@ -1,9 +1,9 @@
 const quickLinks = [
-  { label: "Our Services", href: "#services" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "About Reeves", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Our Services", href: "/services" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "About Reeves", href: "/#about" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Footer() {

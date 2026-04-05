@@ -147,6 +147,15 @@ export default function Services() {
             </div>
           ))}
         </div>
+
+        <div className="text-center mt-14">
+          <a
+            href="/services"
+            className="font-body text-xs tracking-widest uppercase text-bronze hover:text-bronze-dark transition-colors border-b border-bronze/40 pb-0.5"
+          >
+            View all services in detail →
+          </a>
+        </div>
       </div>
     </section>
   );
