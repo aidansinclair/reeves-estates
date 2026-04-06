@@ -137,15 +137,14 @@ export default function ServicesPage() {
             Reeves Estates · Houston, TX
           </p>
           <h1
-            className="text-4xl md:text-6xl font-light text-cream mb-6"
-            style={{ fontFamily: "var(--font-playfair)" }}
+            className="text-4xl md:text-6xl text-cream mb-6"
+            style={{ fontFamily: "var(--font-hatton)", fontWeight: 500, lineHeight: 0.95, letterSpacing: "-0.020em" }}
           >
             Houston Estate Sale Services
           </h1>
           <div className="w-16 h-[1px] bg-bronze mx-auto mb-8" />
           <p
-            className="text-lg text-cream/70 italic leading-relaxed max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-libre-baskerville)" }}
+            className="font-body text-lg text-cream/70 italic leading-relaxed max-w-2xl mx-auto"
           >
             Whether you&rsquo;ve just inherited an estate, you&rsquo;re
             downsizing, or you simply need someone to walk beside you through a
@@ -163,14 +162,12 @@ export default function ServicesPage() {
                 {service.keywords[0]}
               </p>
               <h2
-                className="text-3xl md:text-4xl font-light text-charcoal mb-2"
-                style={{ fontFamily: "var(--font-playfair)" }}
+                className="font-heading text-3xl md:text-4xl font-light text-charcoal mb-2"
               >
                 {service.title}
               </h2>
               <p
-                className="text-lg text-charcoal/60 italic mb-8"
-                style={{ fontFamily: "var(--font-libre-baskerville)" }}
+                className="font-body text-lg text-charcoal/60 italic mb-8"
               >
                 {service.tagline}
               </p>
@@ -190,8 +187,7 @@ export default function ServicesPage() {
       <div className="bg-charcoal py-20">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2
-            className="text-3xl md:text-4xl font-light text-cream mb-4"
-            style={{ fontFamily: "var(--font-playfair)" }}
+            className="font-heading text-3xl md:text-4xl font-light text-cream mb-4"
           >
             Every estate is different.
           </h2>

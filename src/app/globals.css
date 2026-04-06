@@ -8,18 +8,37 @@
   --color-bronze: #B8956A;
   --color-bronze-light: #C9A97E;
   --color-bronze-dark: #A07D55;
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-inter);
+  --font-display: var(--font-hatton);
+  --font-heading: var(--font-pangram);
+  --font-body: var(--font-fragment);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@layer base {
+  h1 {
+    font-family: var(--font-hatton);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -0.020em;
+  }
+  h2 {
+    font-family: var(--font-pangram);
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: 0.005em;
+  }
+}
+
 body {
   background-color: var(--color-cream);
   color: var(--color-charcoal);
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-fragment), system-ui, serif;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.010em;
 }
 
 /* Linen texture overlay */

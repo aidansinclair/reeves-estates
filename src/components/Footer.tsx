@@ -50,7 +50,7 @@ export default function Footer() {
               <span className="font-body text-xs tracking-widest uppercase text-cream/30 block mb-4">
                 Serving Houston
               </span>
-              <p className="text-sm text-cream/50 italic" style={{ fontFamily: "var(--font-libre-baskerville)" }}>
+              <p className="font-body text-sm text-cream/50 italic">
                 Serving Houston families across three generations.
               </p>
             </div>
@@ -61,7 +61,7 @@ export default function Footer() {
       {/* Neighbourhoods */}
       <div className="border-t border-cream/10">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 py-6 text-center">
-          <p className="text-sm text-bronze italic" style={{ fontFamily: "var(--font-libre-baskerville)" }}>
+          <p className="font-body text-sm text-bronze italic">
             Serving River Oaks &middot; Midtown &middot; Houston High-Rises &middot; and surrounding communities
           </p>
         </div>

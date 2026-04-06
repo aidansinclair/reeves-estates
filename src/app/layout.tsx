@@ -1,51 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const playfair = localFont({
-  src: [
-    {
-      path: "../../public/fonts/PlayfairDisplay-Regular.woff2",
-      weight: "400 700",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/PlayfairDisplay-Italic.woff2",
-      weight: "400",
-      style: "italic",
-    },
-  ],
-  variable: "--font-playfair",
+const hatton = localFont({
+  src: "../../public/fonts/PPHatton-Medium.otf",
+  variable: "--font-hatton",
+  weight: "500",
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+const pangram = localFont({
+  src: "../../public/fonts/PPPangramSans-CompactRegular.otf",
+  variable: "--font-pangram",
+  weight: "400",
   display: "swap",
 });
 
-const libreBaskerville = localFont({
-  src: [
-    {
-      path: "../../public/fonts/LibreBaskerville-Regular.woff2",
-      weight: "400 700",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/LibreBaskerville-Italic.woff2",
-      weight: "400",
-      style: "italic",
-    },
-  ],
-  variable: "--font-libre-baskerville",
-  display: "swap",
-});
-
-const neueMachina = localFont({
-  src: "../../public/fonts/PPNeueMachina-InktrapMedium.otf",
-  variable: "--font-neue-machina",
+const fragment = localFont({
+  src: "../../public/fonts/PPFragment-GlareRegular.otf",
+  variable: "--font-fragment",
+  weight: "400",
   display: "swap",
 });
 
@@ -82,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} ${libreBaskerville.variable} ${neueMachina.variable}`}>
+    <html lang="en" className={`${hatton.variable} ${pangram.variable} ${fragment.variable}`}>
       <head>
         <link rel="preload" href="/images/hero/Hero-1.webp" as="image" type="image/webp" />
         <script

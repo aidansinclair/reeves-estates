@@ -120,7 +120,7 @@ function AccordionItem({ item }: { item: FAQItem }) {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between py-7 text-left cursor-pointer"
       >
-        <span className="text-xl md:text-2xl font-medium text-charcoal/85 pr-4" style={{ fontFamily: "var(--font-playfair)" }}>
+        <span className="font-heading text-xl md:text-2xl font-medium text-charcoal/85 pr-4">
           {item.question}
         </span>
         <span

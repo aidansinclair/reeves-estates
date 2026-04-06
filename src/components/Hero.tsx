@@ -42,15 +42,14 @@ export default function Hero() {
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <h1
-          className="hero-fade-in text-[15vw] md:text-[9vw] lg:text-[min(7vw,110px)] font-normal text-cream leading-[1.05] mb-4 text-center"
-          style={{ fontFamily: "var(--font-playfair)" }}
+          className="hero-fade-in text-[15vw] md:text-[9vw] lg:text-[min(7vw,110px)] text-cream mb-4 text-center"
+          style={{ fontFamily: "var(--font-hatton)", fontWeight: 500, lineHeight: 0.95, letterSpacing: "-0.020em" }}
         >
           The Provenance Continues.
         </h1>
         <div className="hero-fade-in w-[60px] h-[1px] bg-bronze mx-auto mb-6" />
         <p
-          className="hero-fade-in-delay text-[1.1rem] md:text-[1.5rem] text-white italic leading-relaxed mb-14 px-2"
-          style={{ fontFamily: "var(--font-libre-baskerville)" }}
+          className="hero-fade-in-delay font-body text-[1.1rem] md:text-[1.5rem] text-white italic leading-relaxed mb-14 px-2"
         >
           White-glove service. Cash offers.<br className="md:hidden" />{" "}Nothing left behind.
         </p>
