@@ -18,11 +18,11 @@ const services = [
   {
     id: "estate-sales",
     title: "Estate Sales",
-    tagline: "Houston's most trusted full-service estate sale company.",
+    tagline: "We take care of everything — so you don't have to.",
     body: [
-      "When the time comes to settle an estate, every decision matters. Reeves Estates manages the entire process — from the initial walkthrough and comprehensive cataloging to professional staging, targeted marketing, and conducting the sale itself.",
-      "We hold estate sales at our 5,000 square foot gallery in Midtown Houston, giving your family's belongings the presentation they deserve. Rather than rushed home sales that depress prices, our gallery environment attracts serious collectors, interior designers, and private buyers who understand value.",
-      "Every item is priced by specialists with decades of experience in fine art, antiques, and mid-century modern furniture. You receive a full accounting of every sale, with proceeds distributed promptly at close.",
+      "Settling an estate is a lot to hold. Reeves Estates manages the entire process so you can focus on what actually needs your attention — family, decisions, rest. We start with a walkthrough, then handle cataloging, pricing, staging, and the sale itself.",
+      "We hold estate sales at our 5,000 square foot gallery in Midtown Houston. Your family's belongings are presented the way they deserve to be — not in a hurried home sale that drives prices down, but in a curated environment that draws in collectors, designers, and buyers who recognize what they're looking at.",
+      "Every item is priced by people who have spent decades with fine art, antiques, and mid-century furniture. When it's done, you receive a full accounting of every sale, and proceeds are distributed promptly.",
     ],
     keywords: ["Houston estate sales", "estate sale company Houston", "estate sale services Houston"],
   },
@@ -31,20 +31,20 @@ const services = [
     title: "Cash Buyout",
     tagline: "One offer. One payment. One closing.",
     body: [
-      "For families who need certainty and speed, our cash buyout service provides exactly that. We purchase your entire estate outright — no waiting for individual buyers, no commission fees, no drawn-out timelines.",
-      "Our team conducts a thorough on-site assessment and delivers a fair cash offer, typically within 48 hours of your initial consultation. If accepted, we handle all removal and clearance. You receive a single payment and a property ready for whatever comes next.",
-      "Cash buyouts are particularly well-suited for executor situations, out-of-town family members managing an estate remotely, or any circumstance where simplicity and speed matter more than maximizing individual sale prices.",
+      "Sometimes certainty matters more than anything else. We purchase your entire estate outright — no waiting, no commissions, no individual buyers to manage.",
+      "We schedule an on-site visit, review everything, and come back with a fair cash offer — usually within 48 hours of your initial call. If it works for you, we handle all removal and clearance. You receive a single payment and a property ready for whatever comes next.",
+      "Cash buyouts work especially well when an executor is managing things remotely, when family is out of town, or when you simply need this handled and behind you.",
     ],
     keywords: ["estate buyout Houston", "cash buyout estate Houston", "buy estate contents Houston"],
   },
   {
     id: "estate-appraisal",
     title: "Estate Appraisal",
-    tagline: "Accurate valuations by specialists, not generalists.",
+    tagline: "Know what you have before you make any decisions.",
     body: [
-      "Before any estate sale or buyout, understanding what you have is essential. Our appraisal team brings deep expertise in fine art, decorative antiques, mid-century modern furniture, jewelry, and collectibles — categories where generalist appraisers routinely under- or over-value.",
-      "We provide comprehensive written valuations that document each item with provenance, condition notes, and current market comparables. These reports satisfy the requirements of estate attorneys, courts, insurance carriers, and tax filings.",
-      "An accurate appraisal protects the estate, gives executors confidence, and ensures that every decision made downstream — whether sale, distribution, or donation — is made on solid ground.",
+      "Before any sale, any buyout, any distribution — you need to know what the estate contains and what it's actually worth. Our appraisers bring deep experience in fine art, antiques, mid-century modern furniture, jewelry, and collectibles. These are categories where a generalist will regularly miss the mark.",
+      "We provide thorough written valuations: each item documented with provenance, condition notes, and current market comparables. The reports hold up for estate attorneys, courts, insurance carriers, and tax filings.",
+      "A good appraisal protects everyone. It gives executors solid footing, gives family members confidence, and ensures that every decision made afterward — whether to sell, distribute, or donate — is made with clear information in hand.",
     ],
     keywords: ["estate appraisal Houston", "fine art appraisal Houston", "antiques appraisal Houston TX"],
   },
@@ -53,31 +53,31 @@ const services = [
     title: "Fine Art & Antiques",
     tagline: "Your most valuable pieces handled by the right hands.",
     body: [
-      "Reeves Art + Design has been a fixture of the Houston art market since 1969. That history gives Reeves Estates an edge that no generalist estate company can match: direct access to a network of serious collectors, auction specialists, and private buyers who specifically seek fine art, antiques, and mid-century modern pieces.",
-      "We handle the full spectrum — paintings, prints, sculpture, silver, porcelain, estate jewelry, and significant furniture — with the care and market knowledge each category demands. High-value pieces are never lumped into a general sale when a better outcome is available.",
-      "For pieces that warrant it, we explore private treaty sales, consignment with specialist dealers, and direct placement with known collectors before recommending any other channel.",
+      "Reeves Art + Design has been part of the Houston art market since 1969. That history gives Reeves Estates something no generalist estate company can offer: a real network of collectors, auction specialists, and private buyers who specifically seek fine art, antiques, and significant mid-century pieces.",
+      "We work across the full range — paintings, prints, sculpture, silver, porcelain, estate jewelry, notable furniture — and bring the care and market knowledge each category requires. High-value pieces are never folded into a general sale when a better outcome is within reach.",
+      "For pieces that warrant it, we look first at private treaty placement, consignment with specialist dealers, and direct outreach to known collectors — before we consider any other channel.",
     ],
     keywords: ["fine art estate sale Houston", "antiques estate Houston", "mid-century modern furniture Houston"],
   },
   {
     id: "private-treaty-sales",
     title: "Private Treaty Sales",
-    tagline: "Discreet placement for pieces that deserve it.",
+    tagline: "Some pieces deserve a quieter path to the right buyer.",
     body: [
-      "Not every significant item should go through a public sale. Private treaty sales connect sellers directly with qualified buyers — without the exposure, fees, and uncertainty of auction.",
-      "We maintain active relationships with collectors, interior designers, and institutions across Houston and beyond. When a piece warrants a more considered approach — whether for reasons of value, provenance, or family preference — we identify the right buyer and negotiate a fair price privately.",
-      "This service is available as a standalone engagement or as part of a broader estate sale strategy, where certain items are placed privately while the remainder goes through our gallery sale.",
+      "Not everything should go through a public sale. Private treaty sales connect your family directly with the right buyer — without the fees, the exposure, or the unpredictability of auction.",
+      "We keep active relationships with collectors, designers, and institutions across Houston and beyond. When a piece warrants more care — whether for its value, its provenance, or simply your family's preference — we find the right buyer and negotiate a fair price, privately.",
+      "This can stand on its own, or it can be part of a broader estate strategy — placing the right pieces quietly while the rest goes through our gallery sale.",
     ],
     keywords: ["private estate sale Houston", "private treaty sale antiques Houston"],
   },
   {
     id: "executor-support",
     title: "Executor Support",
-    tagline: "We make the executor's job manageable.",
+    tagline: "We make your role more manageable.",
     body: [
-      "Serving as executor of an estate is a significant responsibility — and the personal property component is often the most time-consuming part. Reeves Estates works directly alongside estate attorneys and executors to ensure every asset is properly identified, documented, valued, and accounted for.",
-      "We provide the written documentation that probate proceedings require, coordinate with legal counsel on timeline and process, and handle all logistics so the executor can focus on the broader responsibilities of the role.",
-      "For out-of-town executors managing a Houston estate remotely, we serve as the trusted local partner who keeps the process moving — communicating clearly at every stage and requiring as little from you as possible.",
+      "Being named executor is an honor and a burden. The personal property piece of an estate is often the most time-consuming part of it — and the one with the most moving pieces. We work directly alongside estate attorneys and executors to make sure every asset is identified, documented, valued, and accounted for.",
+      "We provide the written documentation the probate process requires, coordinate with your legal team on timing and process, and handle all the logistics — so you can stay focused on the responsibilities that only you can carry.",
+      "If you're managing a Houston estate from out of town, we're the trusted local partner who keeps things moving and communicates clearly at every step. We ask as little of you as possible.",
     ],
     keywords: ["executor estate services Houston", "estate attorney support Houston", "probate estate sale Houston"],
   },
@@ -86,9 +86,9 @@ const services = [
     title: "Estate Clearance",
     tagline: "From full to empty — completely handled.",
     body: [
-      "Once a sale is complete, a property still needs to be cleared. Our estate clearance service manages the full removal of what remains — donating usable items to Houston charities and nonprofits, recycling what can be recycled, and disposing of the rest responsibly.",
-      "We leave properties broom-clean and ready for the next chapter, whether that's a sale, a rental, or a handoff to family. No second vendors, no second coordination.",
-      "Clearance is included as part of our full estate management engagements, and is also available as a standalone service for families who have already handled the sale through other means.",
+      "Once a sale is done, a property still needs to be cleared. We manage the full removal of what remains — donating usable items to Houston charities and nonprofits, recycling where we can, and disposing of the rest responsibly.",
+      "We leave properties clean and ready for whatever comes next — a sale, a handoff to family, or a fresh start. No extra vendors, no extra coordination on your end.",
+      "Clearance is included as part of our full estate engagements. It's also available on its own for families who've already handled the sale and just need the property cleared.",
     ],
     keywords: ["estate clearance Houston", "estate cleanout Houston TX", "property clearance Houston"],
   },
@@ -97,20 +97,20 @@ const services = [
     title: "On-Site Sales",
     tagline: "A professional sale, conducted in the home.",
     body: [
-      "Some families prefer that a sale take place at the property itself — out of sentiment, practicality, or the nature of the contents. We organize and manage professional on-site estate sales with the same expertise we bring to our gallery.",
-      "We handle pricing, staging, marketing, staffing, and security for the duration of the sale. Our team manages the flow of buyers, processes transactions, and provides a complete accounting at close.",
-      "On-site sales work particularly well for large properties with significant furniture and household contents, where transportation to our gallery would be impractical or cost-prohibitive.",
+      "Some families want the sale to happen at the property — for sentimental reasons, practical ones, or because the contents are too substantial to move. We organize and manage professional on-site estate sales with the same standards we bring to our gallery.",
+      "We handle everything: pricing, staging, marketing, staffing, and security for the duration of the sale. Our team manages the flow of buyers, processes every transaction, and gives you a full accounting when it's over.",
+      "On-site sales work especially well for large properties with significant furniture and household contents — situations where transporting everything to our gallery would be impractical or cost more than it saves.",
     ],
     keywords: ["on-site estate sale Houston", "estate sale at home Houston", "estate sale management Houston"],
   },
   {
     id: "living-estates",
     title: "Living Estates",
-    tagline: "Downsizing handled with care, on your timeline.",
+    tagline: "Downsizing, on your terms.",
     body: [
-      "Not every estate sale follows a loss. Many of our clients come to us while they're still very much present — downsizing from a large home, relocating to a retirement community, or simply simplifying after decades of accumulation.",
-      "Living estate services are conducted with particular sensitivity. We work at your pace, on your schedule, and with full respect for the emotional complexity of parting with a lifetime of belongings. Nothing moves without your approval.",
-      "We bring the same expertise in valuation and placement to living estates as we do to any other engagement — ensuring that what you choose to sell brings the right return, and that what you choose to keep is properly documented.",
+      "Not every estate sale follows a loss. Many of our clients come to us while they're very much present — moving from a larger home, transitioning to a retirement community, or simply choosing to simplify after a lifetime of accumulating things that mattered.",
+      "We work at your pace, on your timeline, with full respect for what this process feels like. Nothing is touched without your approval. Nothing moves until you're ready.",
+      "We bring the same care in valuation and placement to living estates as we do to any other engagement — making sure what you choose to sell returns the right value, and that what you keep is properly documented.",
     ],
     keywords: ["downsizing estate sale Houston", "living estate sale Houston", "senior downsizing Houston"],
   },
@@ -119,9 +119,9 @@ const services = [
     title: "Partial Estates",
     tagline: "You don't have to sell everything.",
     body: [
-      "Some families need to move only certain items — a collection, a room's worth of furniture, the contents of a storage unit. Reeves Estates works with partial estates with the same professionalism we bring to full engagements.",
-      "We'll assess what you have, advise on which items are worth selling versus donating, and handle placement through whichever channel makes the most sense — gallery sale, private buyer, or specialist dealer.",
-      "There is no minimum size requirement. If it's worth selling, we can help you sell it well.",
+      "Sometimes you need to move a collection. Or a room. Or the contents of a storage unit that's been sitting untouched for years. You don't need a full estate to work with us.",
+      "We'll assess what you have, advise on what's worth selling versus donating, and handle placement through whatever channel makes the most sense — our gallery, a private buyer, or a specialist dealer.",
+      "There's no minimum. If it's worth selling, we can help you sell it well.",
     ],
     keywords: ["partial estate sale Houston", "sell estate items Houston", "estate consignment Houston"],
   },
@@ -147,8 +147,9 @@ export default function ServicesPage() {
             className="text-lg text-cream/70 italic leading-relaxed max-w-2xl mx-auto"
             style={{ fontFamily: "var(--font-cormorant)" }}
           >
-            From a single significant piece to a complete estate, Reeves brings
-            three generations of expertise to every engagement.
+            Whether you&rsquo;ve just inherited an estate, you&rsquo;re
+            downsizing, or you simply need someone to walk beside you through a
+            complicated process — you&rsquo;re in the right place.
           </p>
         </div>
       </div>
