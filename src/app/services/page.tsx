@@ -138,14 +138,14 @@ export default function ServicesPage() {
           </p>
           <h1
             className="text-4xl md:text-6xl font-light text-cream mb-6"
-            style={{ fontFamily: "var(--font-cormorant)" }}
+            style={{ fontFamily: "var(--font-playfair)" }}
           >
             Houston Estate Sale Services
           </h1>
           <div className="w-16 h-[1px] bg-bronze mx-auto mb-8" />
           <p
             className="text-lg text-cream/70 italic leading-relaxed max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-cormorant)" }}
+            style={{ fontFamily: "var(--font-playfair)" }}
           >
             Whether you&rsquo;ve just inherited an estate, you&rsquo;re
             downsizing, or you simply need someone to walk beside you through a
@@ -164,13 +164,13 @@ export default function ServicesPage() {
               </p>
               <h2
                 className="text-3xl md:text-4xl font-light text-charcoal mb-2"
-                style={{ fontFamily: "var(--font-cormorant)" }}
+                style={{ fontFamily: "var(--font-playfair)" }}
               >
                 {service.title}
               </h2>
               <p
                 className="text-lg text-charcoal/60 italic mb-8"
-                style={{ fontFamily: "var(--font-cormorant)" }}
+                style={{ fontFamily: "var(--font-playfair)" }}
               >
                 {service.tagline}
               </p>
@@ -191,7 +191,7 @@ export default function ServicesPage() {
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2
             className="text-3xl md:text-4xl font-light text-cream mb-4"
-            style={{ fontFamily: "var(--font-cormorant)" }}
+            style={{ fontFamily: "var(--font-playfair)" }}
           >
             Every estate is different.
           </h2>

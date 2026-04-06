@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Libre_Baskerville } from "next/font/google";
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const playfair = localFont({
+  src: [
+    {
+      path: "../../public/fonts/PlayfairDisplay-Regular.woff2",
+      weight: "400 700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/PlayfairDisplay-Italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+  ],
   variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -16,11 +26,20 @@ const inter = Inter({
   display: "swap",
 });
 
-const libreBaskerville = Libre_Baskerville({
+const libreBaskerville = localFont({
+  src: [
+    {
+      path: "../../public/fonts/LibreBaskerville-Regular.woff2",
+      weight: "400 700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LibreBaskerville-Italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+  ],
   variable: "--font-libre-baskerville",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
   display: "swap",
 });
 
