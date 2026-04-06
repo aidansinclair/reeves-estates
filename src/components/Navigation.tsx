@@ -21,7 +21,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <a href="/" className="flex items-center">
             <img src="/images/RE-momo.svg" alt="Reeves Estates" className="h-5 sm:h-7 w-auto" />
           </a>
 
