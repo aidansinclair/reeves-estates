@@ -107,6 +107,20 @@ Reeves Estates serves people during some of the most overwhelming transitions of
 
 **Design sensibility:** Estate law firm meets high-end gallery. Generous whitespace, restrained animation, no visual clutter. The site should feel like walking into a quiet, well-lit room.
 
+## Design System — Spacing
+
+This site uses a tighter spacing scale than Tailwind defaults. Apply the following rules to all new and edited components:
+
+- Default section vertical padding: py-10 (not py-16 or py-20)
+- Large section vertical padding: py-14 lg:py-20 (not py-20 lg:py-28)
+- Component internal padding: p-6 (not p-8 or p-10)
+- Gap between elements: gap-4 (not gap-6 or gap-8)
+- Margin between text blocks: mb-4 (not mb-6 or mb-8)
+
+When in doubt, use the smaller spacing value. Generous whitespace is not a goal on this site — density and elegance are preferred over open space.
+
+Never add extra padding or margin "for breathing room" without explicit instruction.
+
 ## Key Conventions
 
 ### Before building or modifying anything, read:
