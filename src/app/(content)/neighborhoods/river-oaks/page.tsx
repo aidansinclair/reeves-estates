@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Estate Sales in River Oaks, Houston",
@@ -18,7 +16,6 @@ export const metadata: Metadata = {
 export default function RiverOaksPage() {
   return (
     <div className="bg-cream min-h-screen">
-      <Navigation />
       {/* Header */}
       <div className="bg-charcoal py-24 lg:py-32">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
@@ -206,7 +203,6 @@ export default function RiverOaksPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
