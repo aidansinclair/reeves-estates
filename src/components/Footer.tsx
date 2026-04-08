@@ -57,8 +57,8 @@ export default function Footer() {
               <a href="tel:8324749547" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors mt-2">
                 832-474-9547
               </a>
-              <a href="mailto:reevesestatesales@gmail.com" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">
-                reevesestatesales@gmail.com
+              <a href="mailto:midtownmodern@gmail.com" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">
+                midtownmodern@gmail.com
               </a>
             </address>
           </div>
