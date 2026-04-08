@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal text-cream/60">
       <div className="max-w-6xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Left */}
           <div>
             <a href="/">
@@ -46,7 +46,24 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Right */}
+          {/* Address */}
+          <div>
+            <span className="font-body text-xs tracking-widest uppercase text-cream/30 block mb-4">
+              Visit Us
+            </span>
+            <address className="not-italic flex flex-col gap-2">
+              <span className="font-body text-sm text-cream/50">2415 Taft St</span>
+              <span className="font-body text-sm text-cream/50">Houston, TX 77006</span>
+              <a href="tel:8324749547" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors mt-2">
+                832-474-9547
+              </a>
+              <a href="mailto:reevesestatesales@gmail.com" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">
+                reevesestatesales@gmail.com
+              </a>
+            </address>
+          </div>
+
+          {/* Neighborhoods */}
           <div>
             <span className="font-body text-xs tracking-widest uppercase text-cream/30 block mb-4">
               Neighborhoods
