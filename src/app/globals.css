@@ -11,6 +11,7 @@
   --font-display: var(--font-hatton);
   --font-heading: var(--font-hatton);
   --font-body: var(--font-fragment);
+  --font-compact: var(--font-pangram);
 }
 
 html {

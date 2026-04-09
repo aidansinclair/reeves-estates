@@ -30,7 +30,7 @@ export default function Footer() {
 
           {/* Center */}
           <div>
-            <span className="font-body text-xs tracking-widest uppercase text-cream/30 block mb-4">
+            <span className="font-compact text-xs tracking-widest uppercase text-cream/30 block mb-4">
               Quick Links
             </span>
             <div className="flex flex-col gap-2">
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Address */}
           <div>
-            <span className="font-body text-xs tracking-widest uppercase text-cream/30 block mb-4">
+            <span className="font-compact text-xs tracking-widest uppercase text-cream/30 block mb-4">
               Visit Us
             </span>
             <address className="not-italic flex flex-col gap-2">
@@ -65,8 +65,8 @@ export default function Footer() {
 
           {/* Neighborhoods */}
           <div>
-            <span className="font-body text-xs tracking-widest uppercase text-cream/30 block mb-4">
-              Where We Work
+            <span className="font-compact text-xs tracking-widest uppercase text-cream/30 block mb-4">
+              Neighborhoods We Serve
             </span>
             <div className="flex flex-col gap-2">
               <a href="/neighborhoods/river-oaks" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">

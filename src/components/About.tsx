@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section id="about" className="py-12 lg:py-32">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="fade-in-section grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-0 overflow-hidden">
           {/* Left — Pull quote */}
           <div
@@ -25,7 +25,7 @@ export default function About() {
           {/* Right — Body text */}
           <div className="p-12 lg:p-16 bg-cream border border-bronze/10 flex items-center">
             <div>
-              <p className="font-body text-xs tracking-widest uppercase text-bronze mb-3">
+              <p className="font-compact text-xs tracking-widest uppercase text-bronze mb-3">
                 Houston&rsquo;s full-service estate handling specialists
               </p>
               <h2 className="font-heading text-3xl md:text-4xl text-charcoal mb-6">

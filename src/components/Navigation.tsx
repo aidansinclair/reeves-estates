@@ -34,7 +34,7 @@ export default function Navigation() {
                     <a href={link.href}>
                       <Button
                         variant="ghost"
-                        className="text-charcoal/70 rounded-[5px] transition-all duration-150 text-base font-semibold"
+                        className="font-compact text-charcoal/70 rounded-[5px] transition-all duration-150 text-base font-semibold"
                         onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.06)")}
                         onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                       >
@@ -53,7 +53,7 @@ export default function Navigation() {
                   <a href="/#about">
                     <Button
                       variant="ghost"
-                      className="text-charcoal/70 rounded-[5px] transition-all duration-150"
+                      className="font-compact text-charcoal/70 rounded-[5px] transition-all duration-150 text-base font-semibold"
                       onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(184, 149, 106, 0.06)")}
                       onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                     >
@@ -66,7 +66,7 @@ export default function Navigation() {
                 </TooltipContent>
               </Tooltip>
 
-              <span className="font-body text-base font-bold tracking-wide" style={{ color: "#B8956A" }}>
+              <span className="font-compact text-base font-bold tracking-wide" style={{ color: "#B8956A" }}>
                 832-474-9547
               </span>
             </div>
@@ -109,7 +109,7 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="font-body text-sm tracking-wide text-charcoal/70 hover:text-bronze transition-colors"
+              className="font-compact text-sm tracking-wide text-charcoal/70 hover:text-bronze transition-colors"
             >
               {link.label}
             </a>
@@ -118,7 +118,7 @@ export default function Navigation() {
             <a
               href="tel:8324749547"
               onClick={() => setMobileOpen(false)}
-              className="flex-1 text-center py-2.5 font-body text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
+              className="flex-1 text-center py-2.5 font-compact text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
               style={{ backgroundColor: "#B8956A" }}
             >
               Call
@@ -126,7 +126,7 @@ export default function Navigation() {
             <a
               href="sms:8324749547"
               onClick={() => setMobileOpen(false)}
-              className="flex-1 text-center py-2.5 font-body text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
+              className="flex-1 text-center py-2.5 font-compact text-sm font-bold tracking-widest uppercase text-white rounded transition-colors hover:opacity-90"
               style={{ backgroundColor: "#B8956A" }}
             >
               Text

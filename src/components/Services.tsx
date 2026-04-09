@@ -53,7 +53,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="pt-24 pb-12 lg:pt-32 lg:pb-16">
+    <section id="services" className="py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-8 md:mb-16 fade-in-section">
           <h2 className="font-heading text-3xl md:text-5xl font-light text-charcoal mb-4">
@@ -78,22 +78,6 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="text-center mt-14">
-          <a
-            href="/services"
-            className="font-body text-xs tracking-widest uppercase text-bronze hover:text-bronze-dark transition-colors border-b border-bronze/40 pb-0.5"
-          >
-            View all services in detail →
-          </a>
-        </div>
-        <div className="text-center mt-7">
-          <a
-            href="/services"
-            className="inline-block font-body text-sm tracking-widest uppercase px-10 py-4 border border-bronze text-bronze hover:bg-bronze hover:text-cream transition-colors"
-          >
-            View all services in detail →
-          </a>
-        </div>
       </div>
     </section>
   );

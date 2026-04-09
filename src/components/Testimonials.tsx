@@ -43,10 +43,10 @@ export default function Testimonials() {
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div>
-                <span className="font-heading text-base font-semibold text-charcoal">
+                <span className="font-compact text-base font-semibold text-charcoal">
                   {t.name}
                 </span>
-                <span className="block font-body text-xs tracking-wide text-charcoal/50 mt-0.5">
+                <span className="block font-compact text-xs tracking-wide text-charcoal/50 mt-0.5">
                   {t.descriptor}
                 </span>
               </div>

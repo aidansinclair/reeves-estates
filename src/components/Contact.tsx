@@ -15,7 +15,7 @@ export default function Contact() {
 
         <div className="fade-in-section flex flex-col md:flex-row md:justify-around md:items-start gap-8 md:gap-0">
           <div className="text-center px-8">
-            <span className="font-body text-xs tracking-widest uppercase text-cream/35 block mb-3">
+            <span className="font-compact text-xs tracking-widest uppercase text-cream/35 block mb-3">
               Phone
             </span>
             <a
@@ -27,7 +27,7 @@ export default function Contact() {
           </div>
 
           <div className="text-center px-8 md:border-l md:border-cream/10">
-            <span className="font-body text-xs tracking-widest uppercase text-cream/35 block mb-3">
+            <span className="font-compact text-xs tracking-widest uppercase text-cream/35 block mb-3">
               Email
             </span>
             <a
@@ -39,7 +39,7 @@ export default function Contact() {
           </div>
 
           <div className="text-center px-8 md:border-l md:border-cream/10">
-            <span className="font-body text-xs tracking-widest uppercase text-cream/35 block mb-3">
+            <span className="font-compact text-xs tracking-widest uppercase text-cream/35 block mb-3">
               Visit
             </span>
             <a
