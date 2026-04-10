@@ -44,7 +44,7 @@ export default function Contact() {
               Visit
             </span>
             <a
-              href="https://www.google.com/maps?ll=29.747749,-95.38554&z=12&t=m&hl=en&gl=US&mapclient=embed&cid=7976129577028108421"
+              href="https://www.google.com/maps/place/?q=place_id:ChIJP21-eCcjoIgRuxqKmoIKAvY"
               target="_blank"
               rel="noopener noreferrer"
               className="font-heading text-xl md:text-2xl text-bronze hover:text-bronze-light transition-colors"
