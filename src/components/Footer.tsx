@@ -69,13 +69,14 @@ export default function Footer() {
               Neighborhoods We Serve
             </span>
             <div className="flex flex-col gap-2">
-              <a href="/neighborhoods/river-oaks" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">
-                River Oaks
-              </a>
+              <a href="/neighborhoods/river-oaks" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">River Oaks</a>
               <a href="/neighborhoods/memorial" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Memorial</a>
               <a href="/neighborhoods/tanglewood" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Tanglewood</a>
               <a href="/neighborhoods/west-university" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">West University Place</a>
               <a href="/neighborhoods/bellaire" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Bellaire</a>
+              <a href="/neighborhoods/midtown" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Midtown</a>
+              <a href="/neighborhoods/museum-district" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Museum District</a>
+              <a href="/neighborhoods/upper-kirby" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Upper Kirby</a>
             </div>
           </div>
         </div>

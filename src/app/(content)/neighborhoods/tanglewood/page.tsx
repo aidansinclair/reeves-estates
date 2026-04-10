@@ -155,7 +155,7 @@ export default function TanglewoodPage() {
                 { name: "Briargrove" },
                 { name: "West University Place", href: "/neighborhoods/west-university" },
                 { name: "Galleria" },
-                { name: "Upper Kirby" },
+                { name: "Upper Kirby", href: "/neighborhoods/upper-kirby" },
                 { name: "Briargrove Park" },
               ].map((n) =>
                 n.href ? (

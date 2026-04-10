@@ -158,9 +158,9 @@ export default function RiverOaksPage() {
                 { name: "Memorial", href: "/neighborhoods/memorial" },
                 { name: "West University Place", href: "/neighborhoods/west-university" },
                 { name: "Bellaire", href: "/neighborhoods/bellaire" },
-                { name: "Museum District" },
-                { name: "Midtown" },
-                { name: "Upper Kirby" },
+                { name: "Museum District", href: "/neighborhoods/museum-district" },
+                { name: "Midtown", href: "/neighborhoods/midtown" },
+                { name: "Upper Kirby", href: "/neighborhoods/upper-kirby" },
               ].map((n) =>
                 n.href ? (
                   <a key={n.name} href={n.href} className="font-compact text-sm text-charcoal/60 border border-bronze/20 px-3 py-1 hover:text-bronze hover:border-bronze/40 transition-colors">

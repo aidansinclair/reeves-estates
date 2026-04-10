@@ -152,9 +152,9 @@ export default function BellairePage() {
                 { name: "Southside Place" },
                 { name: "Meyerland" },
                 { name: "Braeswood" },
-                { name: "Museum District" },
+                { name: "Museum District", href: "/neighborhoods/museum-district" },
                 { name: "River Oaks", href: "/neighborhoods/river-oaks" },
-                { name: "Upper Kirby" },
+                { name: "Upper Kirby", href: "/neighborhoods/upper-kirby" },
               ].map((n) =>
                 n.href ? (
                   <a key={n.name} href={n.href} className="font-compact text-sm text-charcoal/60 border border-bronze/20 px-3 py-1 hover:text-bronze hover:border-bronze/40 transition-colors">
