@@ -57,9 +57,9 @@ export default function Navigation() {
                 </TooltipContent>
               </Tooltip>
 
-              <span className="font-compact text-lg font-bold tracking-wide" style={{ color: "#B8956A" }}>
+              <a href="tel:8324749547" className="font-compact text-sm font-bold tracking-wide border border-bronze px-3 py-1.5" style={{ color: "#B8956A" }}>
                 832-474-9547
-              </span>
+              </a>
             </div>
           </TooltipProvider>
 
