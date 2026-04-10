@@ -32,7 +32,7 @@ export default function HowItWorks() {
       className="py-32 lg:py-44 bg-cream-dark/50 border-y border-bronze/10"
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16 fade-in-section">
+        <div className="text-center mb-8 md:mb-16 fade-in-section">
           <h2 className="font-heading text-3xl md:text-5xl font-light text-charcoal mb-4">
             One Call. One Team. Everything Handled.
           </h2>
@@ -43,7 +43,7 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <div key={i} className="relative">
               <div className="text-center lg:text-left">
-                <span className="inline-block font-heading text-4xl md:text-5xl font-light text-bronze/30 leading-none">
+                <span className="inline-block font-compact text-4xl md:text-5xl font-light text-bronze/30 leading-none">
                   {step.num}
                 </span>
                 <h3 className="font-heading text-2xl md:text-3xl font-medium text-charcoal mt-3 mb-3">

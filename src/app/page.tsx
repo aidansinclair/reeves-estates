@@ -23,7 +23,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.05 }
     );
 
     document.querySelectorAll(".fade-in-section").forEach((el) => {

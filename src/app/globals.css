@@ -8,18 +8,45 @@
   --color-bronze: #B8956A;
   --color-bronze-light: #C9A97E;
   --color-bronze-dark: #A07D55;
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-inter);
+  --font-display: var(--font-hatton);
+  --font-heading: var(--font-hatton);
+  --font-body: var(--font-fragment);
+  --font-compact: var(--font-pangram);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@layer base {
+  h1 {
+    font-family: var(--font-hatton);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -0.020em;
+  }
+  h2 {
+    font-family: var(--font-hatton);
+    font-weight: 500;
+    line-height: 1.0;
+    letter-spacing: -0.015em;
+  }
+}
+
 body {
   background-color: var(--color-cream);
   color: var(--color-charcoal);
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-fragment), system-ui, serif;
+  font-weight: 400;
+  font-size: 1.0625rem; /* 17px on mobile — one step above browser default */
+  line-height: 1.25;
+  letter-spacing: 0.010em;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.125rem; /* 18px on md+ */
+  }
 }
 
 /* Linen texture overlay */
@@ -37,7 +64,7 @@ body::before {
 .fade-in-section {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
 }
 
 .fade-in-section.visible {

@@ -53,11 +53,11 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 lg:py-32">
+    <section id="services" className="pt-24 pb-10 lg:pt-32 lg:pb-12">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16 fade-in-section">
+        <div className="text-center mb-8 md:mb-16 fade-in-section">
           <h2 className="font-heading text-3xl md:text-5xl font-light text-charcoal mb-4">
-            A Complete Estate. Completely Handled.
+            Your Complete Estate, Completely Handled.
           </h2>
           <div className="w-16 h-[1px] bg-bronze mx-auto" />
         </div>
@@ -78,6 +78,14 @@ export default function Services() {
           ))}
         </div>
 
+        <div className="text-center mt-10">
+          <a
+            href="/services"
+            className="inline-block font-compact text-sm tracking-widest uppercase px-10 py-4 border border-bronze text-bronze hover:bg-bronze hover:text-cream transition-colors"
+          >
+            View all services in detail →
+          </a>
+        </div>
       </div>
     </section>
   );

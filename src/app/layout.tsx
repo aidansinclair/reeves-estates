@@ -1,32 +1,25 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Libre_Baskerville } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const hatton = localFont({
+  src: "../../public/fonts/PPHatton-Medium.otf",
+  variable: "--font-hatton",
+  weight: "500",
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+const pangram = localFont({
+  src: "../../public/fonts/PPPangramSans-CompactRegular.otf",
+  variable: "--font-pangram",
+  weight: "400",
   display: "swap",
 });
 
-const libreBaskerville = Libre_Baskerville({
-  variable: "--font-libre-baskerville",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const neueMachina = localFont({
-  src: "../../public/fonts/PPNeueMachina-InktrapMedium.otf",
-  variable: "--font-neue-machina",
+const fragment = localFont({
+  src: "../../public/fonts/PPFragment-GlareRegular.otf",
+  variable: "--font-fragment",
+  weight: "400",
   display: "swap",
 });
 
@@ -37,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Reeves Estates",
   },
   description:
-    "Houston's trusted full-service estate specialists. Cash buyouts, estate sales, living estates, and liquidations. Serving River Oaks and greater Houston for three generations. Call today.",
+    "Reeves Estates — Houston's full-service estate handling specialists. Cash buyouts, estate sales, appraisals, and liquidations. Serving River Oaks and greater Houston for three generations.",
   keywords:
     "Houston estate sales, estate liquidation Houston, cash estate buyout Houston, River Oaks estate sales, living estate Houston, estate executor Houston, antique estate sale Houston, Houston estate specialists",
   alternates: {
@@ -50,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Reeves Estates",
     title: "Reeves Estates | Houston Estate Sales, Buyouts & Liquidations",
     description:
-      "Houston's trusted full-service estate specialists. Cash buyouts, estate sales, living estates, and liquidations. Serving River Oaks and greater Houston.",
+      "Reeves Estates — Houston's full-service estate handling specialists. Cash buyouts, estate sales, appraisals, and liquidations. Serving River Oaks and greater Houston.",
   },
   verification: {
     google: "0ZvlKynvzOy89HqbicAAppPNQ_u5lx48RIRmIfkUoIo",
@@ -63,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} ${libreBaskerville.variable} ${neueMachina.variable}`}>
+    <html lang="en" className={`${hatton.variable} ${pangram.variable} ${fragment.variable}`}>
       <head>
         <link rel="preload" href="/images/hero/Hero-1.webp" as="image" type="image/webp" />
         <script
@@ -74,7 +67,7 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
                 "name": "Reeves Estates",
-                "description": "Houston's trusted full-service estate specialists. Cash buyouts, estate sales, living estates, and liquidations. Serving River Oaks and greater Houston for three generations.",
+                "description": "Reeves Estates — Houston's full-service estate handling specialists. Cash buyouts, estate sales, appraisals, and liquidations. Serving River Oaks and greater Houston for three generations.",
                 "url": "https://reevesestates.com",
                 "telephone": "+18324749547",
                 "email": "midtownmodern@gmail.com",
@@ -82,9 +75,10 @@ export default function RootLayout({
                 "image": "https://reevesestates.com/images/hero/Hero-1.webp",
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "Corner of Taft & Fairview",
+                  "streetAddress": "2415 Taft St",
                   "addressLocality": "Houston",
                   "addressRegion": "TX",
+                  "postalCode": "77006",
                   "addressCountry": "US"
                 },
                 "geo": {

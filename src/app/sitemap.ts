@@ -40,5 +40,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    ...[
+      "river-oaks",
+      "memorial",
+      "tanglewood",
+      "west-university",
+      "bellaire",
+      "midtown",
+      "museum-district",
+      "upper-kirby",
+    ].map((slug) => ({
+      url: `${baseUrl}/neighborhoods/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
   ];
 }

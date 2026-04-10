@@ -1,23 +1,25 @@
 const quickLinks = [
-  { label: "Our Services", href: "#services" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "About Reeves", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Our Services", href: "/services" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "About Reeves", href: "/#about" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-cream/60">
       <div className="max-w-6xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Left */}
           <div>
-            <img
-              src="/images/RE-momo.svg"
-              alt="Reeves Estates"
-              className="h-5 sm:h-7 w-auto brightness-0 invert opacity-80 mb-4"
-            />
+            <a href="/">
+              <img
+                src="/images/RE-momo.svg"
+                alt="Reeves Estates"
+                className="h-5 sm:h-7 w-auto brightness-0 invert opacity-80 mb-4"
+              />
+            </a>
             <p className="font-body text-xs leading-relaxed text-cream/40 italic mb-2">
               From first call to final close.
             </p>
@@ -28,7 +30,7 @@ export default function Footer() {
 
           {/* Center */}
           <div>
-            <span className="font-body text-xs tracking-widest uppercase text-cream/30 block mb-4">
+            <span className="font-compact text-xs tracking-widest uppercase text-cream/30 block mb-4">
               Quick Links
             </span>
             <div className="flex flex-col gap-2">
@@ -44,15 +46,37 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Right */}
-          <div className="flex flex-col justify-between">
-            <div>
-              <span className="font-body text-xs tracking-widest uppercase text-cream/30 block mb-4">
-                Serving Houston
-              </span>
-              <p className="text-sm text-cream/50 italic" style={{ fontFamily: "var(--font-libre-baskerville)" }}>
-                Serving Houston families across three generations.
-              </p>
+          {/* Address */}
+          <div>
+            <span className="font-compact text-xs tracking-widest uppercase text-cream/30 block mb-4">
+              Visit Us
+            </span>
+            <address className="not-italic flex flex-col gap-2">
+              <span className="font-body text-sm text-cream/50">2415 Taft St</span>
+              <span className="font-body text-sm text-cream/50">Houston, TX 77006</span>
+              <a href="tel:8324749547" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors mt-2">
+                832-474-9547
+              </a>
+              <a href="mailto:midtownmodern@gmail.com" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">
+                midtownmodern@gmail.com
+              </a>
+            </address>
+          </div>
+
+          {/* Neighborhoods */}
+          <div>
+            <span className="font-compact text-xs tracking-widest uppercase text-cream/30 block mb-4">
+              Neighborhoods We Serve
+            </span>
+            <div className="flex flex-col gap-2">
+              <a href="/neighborhoods/river-oaks" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">River Oaks</a>
+              <a href="/neighborhoods/memorial" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Memorial</a>
+              <a href="/neighborhoods/tanglewood" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Tanglewood</a>
+              <a href="/neighborhoods/west-university" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">West University Place</a>
+              <a href="/neighborhoods/bellaire" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Bellaire</a>
+              <a href="/neighborhoods/midtown" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Midtown</a>
+              <a href="/neighborhoods/museum-district" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Museum District</a>
+              <a href="/neighborhoods/upper-kirby" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">Upper Kirby</a>
             </div>
           </div>
         </div>
@@ -61,7 +85,7 @@ export default function Footer() {
       {/* Neighbourhoods */}
       <div className="border-t border-cream/10">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 py-6 text-center">
-          <p className="text-sm text-bronze italic" style={{ fontFamily: "var(--font-libre-baskerville)" }}>
+          <p className="font-body text-sm text-bronze italic">
             Serving River Oaks &middot; Midtown &middot; Houston High-Rises &middot; and surrounding communities
           </p>
         </div>
