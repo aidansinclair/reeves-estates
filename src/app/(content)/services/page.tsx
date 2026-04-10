@@ -132,7 +132,7 @@ export default function ServicesPage() {
       {/* Header */}
       <div className="bg-charcoal py-14 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-          <p className="font-body text-xs tracking-widest uppercase text-bronze mb-4">
+          <p className="font-compact text-xs tracking-widest uppercase text-bronze mb-4">
             Reeves Estates · Houston, TX
           </p>
           <h1
@@ -157,7 +157,7 @@ export default function ServicesPage() {
         <div className="flex flex-col divide-y divide-bronze/15">
           {services.map((service) => (
             <div key={service.id} id={service.id} className="py-10 lg:py-12">
-              <p className="font-body text-xs tracking-widest uppercase text-bronze mb-3">
+              <p className="font-compact text-xs tracking-widest uppercase text-bronze mb-3">
                 {service.keywords[0]}
               </p>
               <h2
@@ -197,15 +197,15 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="tel:8324749547"
-              className="px-8 py-3.5 bg-bronze text-cream font-body text-sm tracking-widest uppercase hover:opacity-90 transition-opacity"
+              className="px-8 py-3.5 bg-bronze text-cream font-compact text-sm tracking-widest uppercase hover:opacity-90 transition-opacity"
             >
               Call 832-474-9547
             </a>
             <a
               href="mailto:midtownmodern@gmail.com?subject=Schedule%20an%20estate%20sale%20consultation"
-              className="px-8 py-3.5 border border-cream/30 text-cream font-body text-sm tracking-widest uppercase hover:border-bronze hover:text-bronze transition-colors"
+              className="px-8 py-3.5 border border-cream/30 text-cream font-compact text-sm tracking-widest uppercase hover:border-bronze hover:text-bronze transition-colors"
             >
-              Send an Email
+              Email us
             </a>
           </div>
         </div>

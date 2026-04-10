@@ -5,7 +5,7 @@ export default function About() {
         <div className="fade-in-section grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-0 overflow-hidden">
           {/* Left — Pull quote */}
           <div
-            className="p-12 lg:p-16 flex items-center"
+            className="p-6 lg:p-16 flex items-center"
             style={{
               background:
                 "linear-gradient(160deg, #1C1C1C 0%, #2A2A2A 60%, #3D3024 100%)",
