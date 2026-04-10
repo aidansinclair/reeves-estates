@@ -4,12 +4,13 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-12 fade-in-section">
           <h2 className="font-heading text-3xl md:text-5xl text-cream mb-4">
-            Your Estate is Uniquely Yours
+            Your Estate. Uniquely Yours.
           </h2>
           <div className="w-16 h-[1px] bg-bronze mx-auto mb-6" />
           <p className="font-body text-base md:text-lg text-cream/65 max-w-xl mx-auto leading-relaxed">
-            Call us for a no-obligation conversation. We will evaluate your
-            estate and give you an honest assessment of your options.
+            Every family comes to this differently. We listen first, and we
+            take the time to understand what matters before we say a word
+            about what&rsquo;s possible.
           </p>
         </div>
 
