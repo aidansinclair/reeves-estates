@@ -27,7 +27,7 @@ export default function TanglewoodPage() {
             className="text-4xl md:text-6xl text-cream mb-4"
             style={{ fontFamily: "var(--font-hatton)", fontWeight: 500, lineHeight: 1.0, letterSpacing: "-0.020em" }}
           >
-            Estate Sales in Tanglewood
+            Tanglewood Collections, Properly Handled
           </h1>
           <div className="w-16 h-[1px] bg-bronze mx-auto mb-4" />
           <p className="font-body text-lg text-cream/70 italic leading-relaxed max-w-2xl mx-auto">
