@@ -6,7 +6,7 @@ import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/comp
 const navLinks = [
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Our Services", href: "/services" },
-  { label: "FAQs", href: "/#faq" },
+  { label: "FAQs", href: "/faq" },
   { label: "Testimonials", href: "/#testimonials" },
 ];
 
