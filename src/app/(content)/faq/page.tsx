@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import FAQAccordion, { faqGroups } from "@/components/FAQAccordion";
+import FAQAccordion from "@/components/FAQAccordion";
+import { faqGroups } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
   title: "Estate Sale FAQs — Houston",
