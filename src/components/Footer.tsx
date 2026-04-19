@@ -55,7 +55,7 @@ export default function Footer() {
             </span>
             <address className="not-italic flex flex-col gap-2">
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=2415%20Taft%20St%2C%20Houston%2C%20TX%2077006"
+                href="https://www.google.com/maps/dir/?api=1&destination=29.747744,-95.385571"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col gap-2 hover:text-bronze transition-colors"
