@@ -54,8 +54,15 @@ export default function Footer() {
               Visit Us
             </span>
             <address className="not-italic flex flex-col gap-2">
-              <span className="font-body text-sm text-cream/50">2415 Taft St</span>
-              <span className="font-body text-sm text-cream/50">Houston, TX 77006</span>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=2415%20Taft%20St%2C%20Houston%2C%20TX%2077006"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col gap-2 hover:text-bronze transition-colors"
+              >
+                <span className="font-body text-sm text-cream/50">2415 Taft St</span>
+                <span className="font-body text-sm text-cream/50">Houston, TX 77006</span>
+              </a>
               <PhoneLink className="font-body text-sm text-cream/50 hover:text-bronze transition-colors mt-2" />
               <a href="mailto:midtownmodern@gmail.com" className="font-body text-sm text-cream/50 hover:text-bronze transition-colors">
                 midtownmodern@gmail.com
