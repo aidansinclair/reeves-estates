@@ -41,7 +41,7 @@ export default function Contact() {
               Visit
             </span>
             <a
-              href="https://www.google.com/maps/place/Reeves+Estates+Sales/@29.747744,-95.385571"
+              href="https://www.google.com/maps/search/?api=1&query=Reeves%20Estates%20Sales%2C%202415%20Taft%20St%2C%20Houston%2C%20TX%2077006"
               target="_blank"
               rel="noopener noreferrer"
               className="font-heading text-xl md:text-2xl text-bronze hover:text-bronze-light transition-colors"
