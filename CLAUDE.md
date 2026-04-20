@@ -159,6 +159,134 @@ Never add extra padding or margin "for breathing room" without explicit instruct
 - Contact section has a four-column layout issue to resolve
 - **Font overhaul needed:** Replace all existing fonts (Cormorant Garamond, PP Neue Machina, Inter, etc.) with the new three-font system: PP Hatton Medium, PP Pangram Sans Compact, PP Fragment Glare. Add .otf files to fonts folder, set up with next/font/local, update globals.css and all components.
 
+---
+
+## UX Audit — Open Items
+*Conducted April 2026 via live site review of reevesestates.com. Ordered by priority. CC should not close any item without explicit instruction from Aidan.*
+
+---
+
+### 🔴 P0 — Fix Immediately
+
+#### 1. Animation/hydration failure — content invisible on live site
+All sections below the hero render with `opacity: 0` or offscreen transforms that never resolve. The IntersectionObserver or scroll-trigger animation logic is failing silently. Visitors see only the hero then a blank page.
+
+**Fix:** Add a CSS fallback so all animated elements default to visible if JS animations don't fire:
+- All elements with class `fade-in-section` (or equivalent) should have a hard fallback: after 1000ms, force `opacity: 1; transform: none` via a timeout
+- Add `@media (prefers-reduced-motion: reduce)` rule that disables all scroll-triggered animations entirely and sets all content visible
+- Consider removing scroll-trigger animations entirely in favour of CSS transitions on load — the content is more important than the entrance effect
+
+#### 2. Contact email is a Gmail address
+`midtownmodern@gmail.com` appears in the footer and contact section. This undermines every trust signal the site builds. It signals a casual operation to attorneys, executors, and high-net-worth clients.
+
+**Fix:** Replace with a professional address (e.g. `matt@reevesestates.com`) configured via Google Workspace or Zoho. Update every instance in the codebase — footer, contact section, any mailto links, and any server-side form handlers.
+
+---
+
+### 🟠 P1 — High Priority
+
+#### 3. Hero scroll dead zone (~580px of no content signal)
+The hero uses `min-h-screen` which at large displays renders at 1,259px. The visible content (headline, subhead, CTAs) occupies the middle third. Below the CTAs, the bottom ~400px is just photo with no content. The next section (`#how-it-works`) has `py-32 lg:py-44` (176px top padding), adding to the dead zone. A visitor on a standard laptop who scrolls past the hero sees nothing readable for ~580px.
+
+**Fix options (pick one or combine):**
+- Reduce hero to `min-h-[85vh]` maximum so the next section always peeks above the fold
+- Reduce `lg:py-44` to `lg:py-32` across all sections (cap max vertical padding at 128px)
+- Make the trust bar section sticky to the bottom of the hero viewport so it's always visible
+
+#### 4. Section backgrounds are too similar — no visual rhythm
+Alternating sections use `bg-cream` and `bg-cream-dark/50` (50% opacity). At any compressed or scrolled view these are perceptually identical. Users cannot distinguish where one section ends and another begins.
+
+**Fix:** Introduce genuine contrast between sections. Options:
+- Use `bg-charcoal` (dark background with cream text) for every other major section — the dark card treatment from the typography system
+- Add a 1px `border-bronze/30` horizontal rule between every section
+- At minimum, increase `bg-cream-dark` opacity from `50%` to `100%`
+
+#### 5. About section is buried at scroll position 7 of 8
+The "About Reeves" section — three generations of family history, 50+ years on Taft & Fairview, 5,000 sq ft gallery — is the most persuasive differentiating content on the site. It currently appears after FAQs and Testimonials, as the second-to-last section.
+
+**Fix:** Move a condensed version of the About content to position 3 in the page order (between How It Works and Services), or pull the key credentialing sentence into the trust bar. The gallery differentiator in particular should appear much earlier. The full About section can remain at its current position but should not be the first place this information appears.
+
+---
+
+### 🟡 P2 — Medium Priority
+
+#### 6. Hero CTA hierarchy: phone number leads, consultation lags
+`832-474-9547` is styled as the primary CTA and "SCHEDULE A CONSULTATION" is secondary. For a service handling estate transitions, many visitors are not ready to call cold. The lower-commitment action should receive equal or greater visual weight.
+
+**Fix:** Make "Schedule a Consultation" the primary button (filled, bronze) and the phone number the secondary action (outlined or text-only). The phone number already appears in the nav — it doesn't need to be the hero's primary CTA.
+
+#### 7. Services section: 10 cards with no grouping
+Ten service cards presented as a flat grid create decision paralysis for a visitor who arrives distressed or overwhelmed.
+
+**Fix:** Group the 10 services into 3 named categories with visual separation:
+- **"Sell Everything"** — Cash Buyout, Estate Sales, On-Site Sales
+- **"Sell Selectively"** — Fine Art & Antiques, Private Treaty, Partial Estates
+- **"Just Handle It"** — Executor Support, Estate Appraisal, Estate Clearance, Living Estates
+
+Each category should have a brief one-line descriptor. Cards within each group can remain as-is.
+
+#### 8. "View all services in detail →" CTA is orphaned
+This link appears after the services grid on a single-page site. Visitors don't know where it leads — another page? A modal? It implies incompleteness.
+
+**Fix:** Either (a) remove it entirely if all services are already shown, (b) replace with "Talk to us about your specific situation →" linking to `#contact`, or (c) link it to a dedicated `/services` page if one exists or will be created.
+
+#### 9. Contact section heading doesn't signal function
+"Your Estate. Uniquely Yours." is good brand copy but doesn't tell a scanning visitor they've found the contact section.
+
+**Fix:** Add a functional subheading above or below the current heading — e.g. "Get in Touch" or "Start the Conversation" — so the section is immediately identifiable when scrolling.
+
+---
+
+### 🟢 P3 — Lower Priority / Refinement
+
+#### 10. Hero scroll affordance is too low contrast
+"LEARN HOW WE WORK TOGETHER ↓" is styled in small caps at near-white on the hero photo. Most visitors won't notice it. It is the only downward affordance on a hero that occupies 100vh.
+
+**Fix:** Increase contrast of the scroll prompt, or replace with an animated chevron on a semi-opaque pill/background. Alternatively, ensure the trust bar peeks above the fold (see P1 item 3) so the scroll invitation is implicit.
+
+#### 11. FAQ missing pricing/commission transparency
+Every visitor is silently wondering what Reeves costs. There is no FAQ entry addressing pricing, commission, or fee structure. This silence increases friction and drop-off.
+
+**Fix:** Add one FAQ entry under "Practical Questions":
+> *"How does Reeves charge for its services?"*
+> Answer can be intentionally vague: "Our fee structure varies by service type — estate sales operate on commission, while buyouts involve a direct purchase offer. We'll walk you through the specifics on our first call."
+
+#### 12. Testimonials lack specificity
+Current attributions: "M. Patterson, Houston" / "R. Caldwell, Estate Attorney" / "J. & S. Whitmore, River Oaks". No photos, no dates, no service type referenced.
+
+**Fix:** Add service type and approximate year after each attribution:
+- "M. Patterson, Houston — Estate Sale, 2024"
+- "R. Caldwell, Estate Attorney — Executor Engagement, 2023"
+- "J. & S. Whitmore, River Oaks — Private Treaty Sale, 2024"
+
+Photos optional but would significantly increase credibility.
+
+#### 13. FAQ accordion lacks ARIA accessibility
+The `+` expand indicator does not communicate state to screen readers. Estate executors skew older and are more likely to use assistive technology.
+
+**Fix:** Ensure each accordion item has:
+- `aria-expanded="true/false"` on the trigger element
+- `aria-controls` pointing to the panel ID
+- `+` / `−` toggle (not just `+` disappearing) as the visual indicator
+
+#### 14. Trust bar underutilises first post-hero real estate
+"Three Generations of Expertise · Fine Art · Antiques · Decorative Arts · Discreet. Thorough. Trusted." tries to do too much in 118px.
+
+**Fix:** Split into two lines or a two-column layout:
+- Line 1 (credentials): "Three generations of expertise in fine art, antiques & decorative arts"
+- Line 2 (differentiator): "Houston's only estate service with a dedicated 5,000 sq ft gallery"
+
+#### 15. Hero headline audience-match risk
+"The Provenance Continues." is elegant but assumes art-world vocabulary. The word "provenance" has a specific technical meaning that a non-collector executor may not immediately connect to their situation.
+
+**Fix:** Do not change the headline without testing. But consider A/B testing against a more direct alternative and measuring bounce rate. The subhead "White-glove service. Cash offers. Nothing left behind." is strong — ensure it's visible and legible at all viewport sizes, not just on large displays.
+
+---
+
+*Last reviewed: April 2026. Items should be checked off in CLAUDE.md as completed, not deleted, so the audit history is preserved.*
+
+---
+
 ## Git Workflow
 
 - `main` is the production branch (auto-deploys to Vercel)
