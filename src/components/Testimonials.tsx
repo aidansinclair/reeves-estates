@@ -23,7 +23,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="pt-24 pb-0 md:py-24 lg:py-32 bg-cream-dark border-y border-bronze/10"
+      className="pt-12 pb-12 md:py-24 lg:py-32 bg-cream-dark border-y border-bronze/10"
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-8 md:mb-16 fade-in-section">
