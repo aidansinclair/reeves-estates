@@ -70,7 +70,7 @@ export default function Hero() {
             </span>
             <a
               href="mailto:midtownmodern@gmail.com?subject=Schedule%20an%20estate%20sale%20consultation"
-              className="px-8 py-3.5 border border-cream/40 text-cream font-compact text-sm tracking-wide hover:text-bronze transition-colors rounded-md"
+              className="px-8 py-3.5 border border-cream/40 text-cream font-compact text-base tracking-wide hover:text-bronze transition-colors rounded-md"
             >
               Schedule a Consultation
             </a>
