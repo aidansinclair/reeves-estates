@@ -49,9 +49,9 @@ export default function Hero() {
         </h1>
         <div className="hero-fade-in w-[60px] h-[1px] bg-bronze mx-auto mb-6" />
         <p
-          className="hero-fade-in-delay font-compact text-[1.1rem] md:text-[1.5rem] text-white leading-relaxed mb-14 px-2"
+          className="hero-fade-in-delay font-body italic text-[1.25rem] md:text-[1.9rem] text-cream/90 leading-relaxed mb-14 px-2"
         >
-          White-glove service. Cash offers.<br className="md:hidden" />{" "}Nothing left behind.
+          White-glove service. Cash offers. Nothing left behind.
         </p>
 
         <div className="hero-fade-in-delay-2 flex flex-col items-center gap-6">

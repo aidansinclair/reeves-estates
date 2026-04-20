@@ -17,9 +17,19 @@ const pangram = localFont({
 });
 
 const fragment = localFont({
-  src: "../../public/fonts/PPFragment-GlareRegular.otf",
+  src: [
+    {
+      path: "../../public/fonts/PPFragment-GlareRegular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/PPFragment-GlareRegularItalic.otf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
   variable: "--font-fragment",
-  weight: "400",
   display: "swap",
 });
 
