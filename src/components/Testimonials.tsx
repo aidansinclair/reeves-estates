@@ -23,11 +23,11 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-24 lg:py-32 bg-cream-dark/50 border-y border-bronze/10"
+      className="py-24 lg:py-32 bg-charcoal"
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-8 md:mb-16 fade-in-section">
-          <h2 className="font-heading text-3xl md:text-5xl font-light text-charcoal mb-4">
+          <h2 className="font-heading text-3xl md:text-5xl font-light text-cream mb-4">
             What Our Clients Say
           </h2>
           <div className="w-16 h-[1px] bg-bronze mx-auto" />
