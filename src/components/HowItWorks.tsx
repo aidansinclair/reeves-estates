@@ -29,7 +29,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="py-20 lg:py-28 bg-cream-dark/50 border-y border-bronze/10"
+      className="py-20 lg:py-28 bg-cream-dark/50 border-y border-bronze/10 scroll-mt-20"
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-8 md:mb-16 fade-in-section">
