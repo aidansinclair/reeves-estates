@@ -23,7 +23,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[75vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen md:min-h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background image carousel */}
       {images.map((src, i) => (
         <img

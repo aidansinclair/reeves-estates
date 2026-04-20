@@ -45,7 +45,7 @@ export default function Home() {
     <main>
       <Navigation />
       <Hero />
-      <TrustBar />
+      <div className="hidden md:block"><TrustBar /></div>
       <HowItWorks />
 <Services />
       <FAQ />
