@@ -62,7 +62,8 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{ __html: `
           @font-face {
             font-family: 'PPFragmentGlareItalic';
-            src: url('/fonts/PPFragment-GlareRegularItalic.otf') format('opentype');
+            src: url('/fonts/PPFragment-GlareRegularItalic.woff2') format('woff2'),
+                 url('/fonts/PPFragment-GlareRegularItalic.otf') format('opentype');
             font-weight: 400;
             font-style: italic;
             font-display: swap;
