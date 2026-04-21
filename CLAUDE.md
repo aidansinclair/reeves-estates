@@ -159,9 +159,105 @@ Never add extra padding or margin "for breathing room" without explicit instruct
 - Contact section has a four-column layout issue to resolve
 - **Font overhaul needed:** Replace all existing fonts (Cormorant Garamond, PP Neue Machina, Inter, etc.) with the new three-font system: PP Hatton Medium, PP Pangram Sans Compact, PP Fragment Glare. Add .otf files to fonts folder, set up with next/font/local, update globals.css and all components.
 
+---
+
+## UX Audit — Open Items
+*Conducted April 2026 via live site review of reevesestates.com. Ordered by priority. Do not close any item without explicit instruction from Aidan.*
+
+---
+
+### Resolved
+
+#### 1. ~~Animation/hydration failure — content invisible on live site~~
+~~All sections below the hero render with `opacity: 0` or offscreen transforms that never resolve.~~
+**Resolved:** Added 1500ms timeout fallback in `page.tsx` and `prefers-reduced-motion` CSS rule in `globals.css`.
+
+#### 3. ~~Hero scroll dead zone~~
+~~Hero at full viewport height left ~580px of empty space before the next section.~~
+**Resolved:** Hero set to `min-h-screen md:min-h-[85vh]`; TrustBar hidden on mobile; section padding reduced.
+
+#### 4. ~~Section backgrounds too similar — no visual rhythm~~
+~~Alternating sections were perceptually identical at `bg-cream` and `bg-cream-dark/50`.~~
+**Resolved:** Credentials block uses `bg-charcoal`; HowItWorks uses `bg-cream-dark` with `border-y border-bronze/10`.
+
+#### 5. ~~About content buried at scroll position 7 of 8~~
+~~Key differentiators (50+ years, 3 generations, 5,000 sq ft gallery) appeared only near the bottom.~~
+**Resolved:** Added Credentials component (charcoal stat block) between HowItWorks and Services.
+
+#### 13. ~~FAQ accordion lacks ARIA accessibility~~
+~~The `+` indicator didn't communicate state to screen readers.~~
+**Resolved:** `aria-expanded`, `aria-controls`, `role="region"`, and `+` / `−` toggle all implemented.
+
+---
+
+### Still open
+
+#### 2. Contact email is a Gmail address
+`midtownmodern@gmail.com` appears in the footer and contact section. For attorneys, executors, and high-net-worth clients, this undermines confidence.
+
+**When ready:** Replace with a professional address (e.g. `matt@reevesestates.com`) via Google Workspace or Zoho. Update every instance — footer, contact section, mailto links, any form handlers.
+
+#### 6. Hero CTA hierarchy
+The phone number is visually primary; "Schedule a Consultation" is secondary. Many visitors arriving during an estate transition aren't ready to call cold — the lower-commitment action deserves equal or greater weight.
+
+**Suggestion:** Make "Schedule a Consultation" the filled bronze button and the phone number the secondary action. The number already appears in the nav.
+
+#### 7. Services section: 10 cards with no grouping
+A flat grid of ten cards can feel overwhelming for a visitor who arrives distressed.
+
+**Suggestion:** Group into three named categories:
+- **"Sell Everything"** — Cash Buyout, Estate Sales, On-Site Sales
+- **"Sell Selectively"** — Fine Art & Antiques, Private Treaty, Partial Estates
+- **"Just Handle It"** — Executor Support, Estate Appraisal, Estate Clearance, Living Estates
+
+Each category could have a brief one-line descriptor.
+
+#### 8. "View all services in detail →" CTA
+This link appears after the services grid on a single-page site. Visitors don't know where it leads.
+
+**Suggestion:** Either remove it, replace with "Talk to us about your specific situation →" linking to `#contact`, or save it for a future `/services` page.
+
+#### 9. Contact section heading doesn't signal function
+"Your Estate. Uniquely Yours." is good brand copy but doesn't identify the section for a visitor who's scanning.
+
+**Suggestion:** Add a functional subheading — e.g. "Get in Touch" or "Start the Conversation."
+
+#### 10. Hero scroll affordance is low contrast
+"LEARN HOW WE WORK TOGETHER ↓" is small caps at near-white on the hero photo. It's easy to miss as the only downward cue on a full-height hero.
+
+**Suggestion:** Increase contrast, or add a semi-opaque background behind the prompt. Alternatively, letting the trust bar peek above the fold makes the invitation implicit.
+
+#### 11. FAQ missing pricing/commission transparency
+Visitors are often quietly wondering what Reeves costs. No FAQ entry addresses fee structure.
+
+**Suggestion:** Add one entry — something like: *"Our fee structure varies by service type — estate sales operate on commission, while buyouts involve a direct purchase offer. We'll walk you through the specifics on our first call."*
+
+#### 12. Testimonials lack specificity
+Current attributions have no dates or service type. Adding context makes them feel more credible.
+
+**Suggestion:** Append service type and year — e.g. "M. Patterson, Houston — Estate Sale, 2024".
+
+#### 14. Trust bar content
+"Three Generations of Expertise · Fine Art · Antiques · Decorative Arts · Discreet. Thorough. Trusted." is trying to do a lot in a narrow band.
+
+**Suggestion:** Split into two focused lines — credentials on one, gallery differentiator on the other.
+
+#### 15. Hero headline audience-match
+"The Provenance Continues." is elegant but assumes art-world vocabulary. Non-collector executors may not immediately connect.
+
+**Suggestion:** Don't change without testing. The subhead carries the plain-language weight — make sure it's always legible at all viewports.
+
+---
+
+*Last reviewed: April 2026. Mark items resolved above rather than deleting them, so the audit history is preserved.*
+
+---
+
 ## Git Workflow
 
 - `main` is the production branch (auto-deploys to Vercel)
 - Feature branches for all new work
 - Small, isolated fixes (like breakpoint tweaks) can go directly to `main`
 - Rebase feature branches onto `main` after direct fixes: `git rebase main`
+
+**Vercel previews:** Branch preview deployments exist but the preview URL is not reliably accessible during a session — clicking a deployment link typically lands on GitHub rather than the live preview. The practical approach is to merge to `main` to verify changes on the live site. Don't wait for a preview URL to confirm work.
