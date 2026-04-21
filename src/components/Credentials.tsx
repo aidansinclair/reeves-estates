@@ -16,7 +16,7 @@ export default function Credentials() {
           <div className="md:px-10">
             <p className="font-heading text-6xl text-bronze mb-2">5,000</p>
             <p className="font-compact text-xs tracking-widest uppercase text-cream/40 mb-2">Square Feet</p>
-            <p className="font-body text-sm text-cream/65 leading-relaxed">Houston&rsquo;s only estate gallery — a considered setting for serious buyers</p>
+            <p className="font-body text-sm text-cream/65 leading-relaxed">A gallery space to handle any estate</p>
           </div>
         </div>
       </div>
