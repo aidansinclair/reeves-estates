@@ -82,13 +82,13 @@ export default function Hero() {
               e.preventDefault();
               document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="flex flex-col items-center gap-2 mt-6 md:mt-12 lg:mt-16 group cursor-pointer"
+            className="flex flex-col items-center gap-2 mt-6 md:mt-12 lg:mt-16 group cursor-pointer bg-black/30 backdrop-blur-sm px-5 py-3 rounded-full hover:bg-black/45 transition-colors"
           >
-            <span className="font-compact text-xs tracking-widest uppercase font-semibold text-cream/60 group-hover:text-cream/90 transition-colors">
+            <span className="font-compact text-xs tracking-widest uppercase font-semibold text-cream/85 group-hover:text-cream transition-colors">
               Learn how we work together
             </span>
             <svg
-              className="w-5 h-5 text-cream/50 group-hover:text-cream/80 transition-colors animate-bounce"
+              className="w-5 h-5 text-cream/75 group-hover:text-cream transition-colors animate-bounce"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
