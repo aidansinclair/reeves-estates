@@ -56,23 +56,15 @@ export default function Hero() {
         </p>
 
         <div className="hero-fade-in-delay-2 flex flex-col items-center gap-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* Mobile: tap-to-call button */}
-            <a
-              href="tel:8324749547"
-              className="lg:hidden px-8 py-3.5 bg-bronze text-cream font-compact text-sm tracking-wide hover:bg-bronze-dark transition-colors rounded-md"
-            >
-              Call Now 832-474-9547
-            </a>
-            {/* Desktop: plain display text */}
-            <span className="hidden lg:block font-compact text-3xl font-semibold text-cream tracking-normal">
-              832-474-9547
+          <div className="flex flex-col items-center gap-1">
+            <span className="font-compact text-xs tracking-widest uppercase text-bronze/80">
+              Call or text
             </span>
             <a
-              href="mailto:midtownmodern@gmail.com?subject=Schedule%20an%20estate%20sale%20consultation"
-              className="px-8 py-3.5 border border-cream/40 text-cream font-compact text-base font-semibold tracking-wide hover:text-bronze transition-colors rounded-md"
+              href="tel:8324749547"
+              className="font-compact text-2xl md:text-3xl text-cream tracking-wide hover:text-bronze transition-colors"
             >
-              Schedule a Consultation
+              832-474-9547
             </a>
           </div>
 
