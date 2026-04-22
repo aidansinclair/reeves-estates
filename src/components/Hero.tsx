@@ -55,14 +55,14 @@ export default function Hero() {
           White-glove service. Cash offers. Nothing left behind.
         </p>
 
-        <div className="hero-fade-in-delay-2 flex flex-col items-center gap-6">
-          <div className="flex flex-col items-center gap-1">
-            <span className="font-compact text-xs tracking-widest uppercase text-bronze/80">
+        <div className="hero-fade-in-delay-2 flex flex-col items-center">
+          <div className="flex flex-col items-center gap-2">
+            <span className="font-compact text-sm tracking-widest uppercase font-semibold text-cream/85">
               Call or text
             </span>
             <a
               href="tel:8324749547"
-              className="font-compact text-2xl md:text-3xl text-cream tracking-wide hover:text-bronze transition-colors"
+              className="font-compact text-4xl md:text-5xl text-cream tracking-wide hover:text-bronze transition-colors"
             >
               832-474-9547
             </a>
@@ -74,13 +74,10 @@ export default function Hero() {
               e.preventDefault();
               document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="flex flex-col items-center gap-2 mt-6 md:mt-12 lg:mt-16 group cursor-pointer bg-black/30 backdrop-blur-sm px-5 py-3 rounded-full hover:bg-black/45 transition-colors"
+            className="mt-12 md:mt-16 cursor-pointer w-11 h-11 rounded-full border border-cream/40 flex items-center justify-center hover:border-cream/75 transition-colors animate-bounce"
           >
-            <span className="font-compact text-xs tracking-widest uppercase font-semibold text-cream/85 group-hover:text-cream transition-colors">
-              Learn how we work together
-            </span>
             <svg
-              className="w-5 h-5 text-cream/75 group-hover:text-cream transition-colors animate-bounce"
+              className="w-4 h-4 text-cream/80"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
