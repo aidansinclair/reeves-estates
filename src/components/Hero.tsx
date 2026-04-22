@@ -74,7 +74,7 @@ export default function Hero() {
               e.preventDefault();
               document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="mt-12 md:mt-16 cursor-pointer w-11 h-11 rounded-full border border-cream/40 flex items-center justify-center hover:border-cream/75 transition-colors animate-bounce"
+            className="mt-12 md:mt-16 cursor-pointer w-11 h-11 rounded-full border border-cream/40 flex items-center justify-center hover:border-cream/75 transition-colors"
           >
             <svg
               className="w-4 h-4 text-cream/80"
