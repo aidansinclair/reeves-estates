@@ -3,6 +3,18 @@
 > Claude Code reads this file automatically at the start of every session.
 > It is the single source of truth for project conventions. Follow it precisely.
 
+## Current State
+*Last updated: 2026-04-28*
+
+**Last session:** Housekeeping and CLAUDE.md overhaul — pulled latest from `origin/main` (now at `c6599a0`), reviewed all audit items against live code, marked completed items (1, 3, 4 partial, 5 partial, 7, 9, 13), added font CSS variable reference table, annotated Gmail as client preference (do not change), refreshed active branches list, removed CalEmbed from component list (feature cut by client), established end-of-session "Current State" commit workflow.
+
+**Next up (suggested):**
+- Audit item 6: flip hero CTA hierarchy — make "Schedule a Consultation" primary (filled bronze), phone number secondary
+- Audit item 8: resolve orphaned "View all services in detail →" link in `Services.tsx:128`
+- Delete `CalEmbed.tsx` if confirmed unused
+- Confirm whether `feature/services-grouping` has been merged into `main` or is still open
+- Audit item 11: add pricing/commission FAQ entry
+
 ## Project Overview
 
 **reevesestates.com** — Single-page marketing website for Reeves Estates, a Houston-based estate handling business.
@@ -29,8 +41,8 @@
 
 - Single page: `src/app/page.tsx` (marked `"use client"`)
 - Global styles: `src/app/globals.css`
-- Components: all in `src/components/` — Navigation, Hero, TrustBar, Services, HowItWorks, About, Testimonials, Contact, Footer
-- Scroll animations: `IntersectionObserver` in root page applies `visible` class to `.fade-in-section` elements
+- Components: all in `src/components/` — Navigation, Hero, TrustBar, Credentials, Services, HowItWorks, About, Testimonials, Contact, Footer, FAQ, FAQAccordion, BackToTop, PullQuote, PhoneLink
+- Scroll animations: `IntersectionObserver` in root page applies `visible` class to `.fade-in-section` elements; 1000ms `setTimeout` fallback forces `opacity: 1; transform: none` if JS animations don't fire
 
 ## Design System
 
@@ -80,6 +92,16 @@ letter-spacing: 0.010em;
 ```
 
 **Font files:** Add `.otf` files to the fonts folder (check `/fonts`, `/public/fonts`, or `/src/fonts`). Load via `next/font/local`. Expose as CSS variables and reference in Tailwind config. Do NOT use `next/font/google`.
+
+**CSS variable names (use these in components — do not hardcode font-family strings):**
+
+| Variable          | Font                    | Tailwind class  |
+|-------------------|-------------------------|-----------------|
+| `--font-hatton`   | PP Hatton Medium        | `font-heading`  |
+| `--font-pangram`  | PP Pangram Sans Compact | `font-compact`  |
+| `--font-fragment` | PP Fragment Glare       | `font-body`     |
+
+Aliases: `--font-display` and `--font-heading` both resolve to `--font-hatton`.
 
 > **Note:** If you find Cormorant Garamond, PP Neue Machina, Playfair Display, Libre Baskerville, or Inter used for display/body roles in the codebase, they are from an older design system and should be replaced with the three fonts listed above.
 
@@ -146,18 +168,25 @@ Never add extra padding or margin "for breathing room" without explicit instruct
 ## Contact Info
 
 - **Phone:** 832-474-9547
-- **Email:** midtownmodern@gmail.com
+- **Email:** midtownmodern@gmail.com *(client's explicit preference — do not change without instruction from Aidan)*
 - **Location:** Houston, TX
 
 ## Active Branches & Known Issues
 
 > Update this section as work progresses.
 
-- `feature/cal-booking-modal` — Cal.com booking integration (modal-based)
-- `feature/test-tooltip-button` — Tooltip button experiment
-- Hero carousel images may not load on feature branches (works on `main`)
-- Contact section has a four-column layout issue to resolve
-- **Font overhaul needed:** Replace all existing fonts (Cormorant Garamond, PP Neue Machina, Inter, etc.) with the new three-font system: PP Hatton Medium, PP Pangram Sans Compact, PP Fragment Glare. Add .otf files to fonts folder, set up with next/font/local, update globals.css and all components.
+**Active branches:**
+- `feature/email-cta` — Email CTA experiment
+- `feature/faq-page` — Dedicated /faq page
+- `feature/faq-schema-contact-page` — FAQ schema markup + contact page
+- `feature/neighborhood-river-oaks` — River Oaks neighbourhood content
+- `feature/phone-link-desktop` — Desktop phone link treatment
+- `feature/services-grouping` — Services category grouping (may be merged into main already)
+- `feature/post-seo-polish` / `feature/seo-content` / `release/seo-phase-1` — SEO work
+
+**Open issues:**
+- Contact section layout: verify four-column layout is resolved on mobile
+- `feature/services-grouping`: confirm whether this branch has been merged into `main` or is still open
 
 ---
 
@@ -168,72 +197,46 @@ Never add extra padding or margin "for breathing room" without explicit instruct
 
 ### 🔴 P0 — Fix Immediately
 
-#### 1. Animation/hydration failure — content invisible on live site
-All sections below the hero render with `opacity: 0` or offscreen transforms that never resolve. The IntersectionObserver or scroll-trigger animation logic is failing silently. Visitors see only the hero then a blank page.
+#### ✅ 1. Animation/hydration failure — content invisible on live site *(fixed)*
+All sections below the hero render with `opacity: 0` or offscreen transforms that never resolve. The IntersectionObserver or scroll-trigger animation logic was failing silently.
 
-**Fix:** Add a CSS fallback so all animated elements default to visible if JS animations don't fire:
-- All elements with class `fade-in-section` (or equivalent) should have a hard fallback: after 1000ms, force `opacity: 1; transform: none` via a timeout
-- Add `@media (prefers-reduced-motion: reduce)` rule that disables all scroll-triggered animations entirely and sets all content visible
-- Consider removing scroll-trigger animations entirely in favour of CSS transitions on load — the content is more important than the entrance effect
+**Resolution:** 1000ms `setTimeout` fallback added in `page.tsx` forces `opacity: 1; transform: none` on all `.fade-in-section` elements if JS animations don't fire. `@media (prefers-reduced-motion: reduce)` rule added in `globals.css`.
 
-#### 2. Contact email is a Gmail address
-`midtownmodern@gmail.com` appears in the footer and contact section. This undermines every trust signal the site builds. It signals a casual operation to attorneys, executors, and high-net-worth clients.
-
-**Fix:** Replace with a professional address (e.g. `matt@reevesestates.com`) configured via Google Workspace or Zoho. Update every instance in the codebase — footer, contact section, any mailto links, and any server-side form handlers.
+#### 2. Contact email is a Gmail address *(client preference — do not change)*
+`midtownmodern@gmail.com` is flagged as a trust signal risk for high-net-worth clients. However, the client has explicitly requested this address be kept. No action to be taken.
 
 ---
 
 ### 🟠 P1 — High Priority
 
-#### 3. Hero scroll dead zone (~580px of no content signal)
-The hero uses `min-h-screen` which at large displays renders at 1,259px. The visible content (headline, subhead, CTAs) occupies the middle third. Below the CTAs, the bottom ~400px is just photo with no content. The next section (`#how-it-works`) has `py-32 lg:py-44` (176px top padding), adding to the dead zone. A visitor on a standard laptop who scrolls past the hero sees nothing readable for ~580px.
+#### ✅ 3. Hero scroll dead zone (~580px of no content signal) *(fixed)*
+Hero was `min-h-screen` at large displays. **Resolution:** Changed to `min-h-screen md:min-h-[85vh]` so the next section always peeks above the fold on desktop.
 
-**Fix options (pick one or combine):**
-- Reduce hero to `min-h-[85vh]` maximum so the next section always peeks above the fold
-- Reduce `lg:py-44` to `lg:py-32` across all sections (cap max vertical padding at 128px)
-- Make the trust bar section sticky to the bottom of the hero viewport so it's always visible
+#### ✅ 4. Section backgrounds are too similar — no visual rhythm *(partially fixed)*
+Sections were indistinguishable. **Resolution:** `border-bronze/10` horizontal rules added between sections (`HowItWorks.tsx`, `Testimonials.tsx`). Full charcoal alternation was not implemented — open if further contrast is needed.
 
-#### 4. Section backgrounds are too similar — no visual rhythm
-Alternating sections use `bg-cream` and `bg-cream-dark/50` (50% opacity). At any compressed or scrolled view these are perceptually identical. Users cannot distinguish where one section ends and another begins.
-
-**Fix:** Introduce genuine contrast between sections. Options:
-- Use `bg-charcoal` (dark background with cream text) for every other major section — the dark card treatment from the typography system
-- Add a 1px `border-bronze/30` horizontal rule between every section
-- At minimum, increase `bg-cream-dark` opacity from `50%` to `100%`
-
-#### 5. About section is buried at scroll position 7 of 8
-The "About Reeves" section — three generations of family history, 50+ years on Taft & Fairview, 5,000 sq ft gallery — is the most persuasive differentiating content on the site. It currently appears after FAQs and Testimonials, as the second-to-last section.
-
-**Fix:** Move a condensed version of the About content to position 3 in the page order (between How It Works and Services), or pull the key credentialing sentence into the trust bar. The gallery differentiator in particular should appear much earlier. The full About section can remain at its current position but should not be the first place this information appears.
+#### ✅ 5. About section is buried at scroll position 7 of 8 *(partially addressed)*
+**Resolution:** `Credentials` block added between HowItWorks and Services, surfacing three-generation credentials and gallery differentiator earlier in the page. Full About section remains in its original position.
 
 ---
 
 ### 🟡 P2 — Medium Priority
 
 #### 6. Hero CTA hierarchy: phone number leads, consultation lags
-`832-474-9547` is styled as the primary CTA and "SCHEDULE A CONSULTATION" is secondary. For a service handling estate transitions, many visitors are not ready to call cold. The lower-commitment action should receive equal or greater visual weight.
+`832-474-9547` is the primary hero CTA. For a service handling estate transitions, many visitors are not ready to call cold — the lower-commitment action should receive equal or greater visual weight.
 
 **Fix:** Make "Schedule a Consultation" the primary button (filled, bronze) and the phone number the secondary action (outlined or text-only). The phone number already appears in the nav — it doesn't need to be the hero's primary CTA.
 
-#### 7. Services section: 10 cards with no grouping
-Ten service cards presented as a flat grid create decision paralysis for a visitor who arrives distressed or overwhelmed.
-
-**Fix:** Group the 10 services into 3 named categories with visual separation:
-- **"Sell Everything"** — Cash Buyout, Estate Sales, On-Site Sales
-- **"Sell Selectively"** — Fine Art & Antiques, Private Treaty, Partial Estates
-- **"Just Handle It"** — Executor Support, Estate Appraisal, Estate Clearance, Living Estates
-
-Each category should have a brief one-line descriptor. Cards within each group can remain as-is.
+#### ✅ 7. Services section: 10 cards with no grouping *(fixed)*
+**Resolution:** Services grouped into three named categories — "Sell Everything," "Sell Selectively," "Just Handle It" — each with a one-line descriptor. Implemented in `Services.tsx`.
 
 #### 8. "View all services in detail →" CTA is orphaned
-This link appears after the services grid on a single-page site. Visitors don't know where it leads — another page? A modal? It implies incompleteness.
+This link still appears after the services grid (`Services.tsx:128`) on a single-page site. Visitors don't know where it leads.
 
-**Fix:** Either (a) remove it entirely if all services are already shown, (b) replace with "Talk to us about your specific situation →" linking to `#contact`, or (c) link it to a dedicated `/services` page if one exists or will be created.
+**Fix:** Either (a) remove it, (b) replace with "Talk to us about your specific situation →" linking to `#contact`, or (c) link to a `/services` page if one is created.
 
-#### 9. Contact section heading doesn't signal function
-"Your Estate. Uniquely Yours." is good brand copy but doesn't tell a scanning visitor they've found the contact section.
-
-**Fix:** Add a functional subheading above or below the current heading — e.g. "Get in Touch" or "Start the Conversation" — so the section is immediately identifiable when scrolling.
+#### ✅ 9. Contact section heading doesn't signal function *(fixed)*
+**Resolution:** Contact section heading updated to "Contact Us" with a supporting paragraph. Implemented in `Contact.tsx`.
 
 ---
 
@@ -261,13 +264,8 @@ Current attributions: "M. Patterson, Houston" / "R. Caldwell, Estate Attorney" /
 
 Photos optional but would significantly increase credibility.
 
-#### 13. FAQ accordion lacks ARIA accessibility
-The `+` expand indicator does not communicate state to screen readers. Estate executors skew older and are more likely to use assistive technology.
-
-**Fix:** Ensure each accordion item has:
-- `aria-expanded="true/false"` on the trigger element
-- `aria-controls` pointing to the panel ID
-- `+` / `−` toggle (not just `+` disappearing) as the visual indicator
+#### ✅ 13. FAQ accordion lacks ARIA accessibility *(fixed)*
+**Resolution:** `aria-expanded` and `aria-controls` added to FAQ accordion triggers in `FAQ.tsx`.
 
 #### 14. Trust bar underutilises first post-hero real estate
 "Three Generations of Expertise · Fine Art · Antiques · Decorative Arts · Discreet. Thorough. Trusted." tries to do too much in 118px.
