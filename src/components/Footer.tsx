@@ -102,8 +102,7 @@ export default function Footer() {
       <div className="border-t border-cream/10">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 py-4">
           <p className="font-body text-xs text-cream/25 text-center">
-            &copy; {new Date().getFullYear()} Reeves Estates. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Reeves Estates. Houston, TX. All rights reserved.
           </p>
         </div>
       </div>
