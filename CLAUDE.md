@@ -10,14 +10,13 @@
 
 **Next up (suggested):**
 - Audit item 6: flip hero CTA hierarchy — make "Schedule a Consultation" primary (filled bronze), phone number secondary
-- Audit item 8: resolve orphaned "View all services in detail →" link in `Services.tsx:128`
 - Delete `CalEmbed.tsx` if confirmed unused
 - Confirm whether `feature/services-grouping` has been merged into `main` or is still open
 - Audit item 11: add pricing/commission FAQ entry
 
 ## Project Overview
 
-**reevesestates.com** — Single-page marketing website for Reeves Estates, a Houston-based estate handling business.
+**reevesestates.com** — Marketing website for Reeves Estates, a Houston-based estate handling business. The site has a long-scroll homepage and a growing set of SEO content pages.
 
 - **Live site:** reevesestates.com
 - **Hosting:** Vercel (auto-deploys from `main`)
@@ -39,9 +38,17 @@
 
 ## Architecture
 
-- Single page: `src/app/page.tsx` (marked `"use client"`)
+**Homepage:** `src/app/page.tsx` (marked `"use client"`) — long-scroll page composing all marketing sections.
+
+**SEO content pages** (under `src/app/(content)/`, shared Navigation + Footer layout):
+- `/services` — expanded services detail page
+- `/faq` — dedicated FAQ page
+- `/neighborhoods/[slug]` — neighbourhood pages (bellaire, memorial, midtown, museum-district, river-oaks, tanglewood, upper-kirby, west-university)
+
+**Supporting files:**
 - Global styles: `src/app/globals.css`
 - Components: all in `src/components/` — Navigation, Hero, TrustBar, Credentials, Services, HowItWorks, About, Testimonials, Contact, Footer, FAQ, FAQAccordion, BackToTop, PullQuote, PhoneLink
+- `src/app/sitemap.ts` and `src/app/robots.ts` — SEO metadata
 - Scroll animations: `IntersectionObserver` in root page applies `visible` class to `.fade-in-section` elements; 1000ms `setTimeout` fallback forces `opacity: 1; transform: none` if JS animations don't fire
 
 ## Design System
@@ -230,10 +237,8 @@ Sections were indistinguishable. **Resolution:** `border-bronze/10` horizontal r
 #### ✅ 7. Services section: 10 cards with no grouping *(fixed)*
 **Resolution:** Services grouped into three named categories — "Sell Everything," "Sell Selectively," "Just Handle It" — each with a one-line descriptor. Implemented in `Services.tsx`.
 
-#### 8. "View all services in detail →" CTA is orphaned
-This link still appears after the services grid (`Services.tsx:128`) on a single-page site. Visitors don't know where it leads.
-
-**Fix:** Either (a) remove it, (b) replace with "Talk to us about your specific situation →" linking to `#contact`, or (c) link to a `/services` page if one is created.
+#### ✅ 8. "View all services in detail →" CTA is orphaned *(not an issue — /services page exists)*
+`/services` is a real SEO-targeted page at `src/app/(content)/services/page.tsx`. Both this button and the footer Quick Link correctly point to it.
 
 #### ✅ 9. Contact section heading doesn't signal function *(fixed)*
 **Resolution:** Contact section heading updated to "Contact Us" with a supporting paragraph. Implemented in `Contact.tsx`.
