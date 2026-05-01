@@ -4,15 +4,24 @@
 > It is the single source of truth for project conventions. Follow it precisely.
 
 ## Current State
-*Last updated: 2026-04-28*
+*Last updated: 2026-05-01*
 
-**Last session:** Housekeeping and CLAUDE.md overhaul — pulled latest from `origin/main` (now at `c6599a0`), reviewed all audit items against live code, marked completed items (1, 3, 4 partial, 5 partial, 7, 9, 13), added font CSS variable reference table, annotated Gmail as client preference (do not change), refreshed active branches list, removed CalEmbed from component list (feature cut by client), established end-of-session "Current State" commit workflow.
+**Last session:** Diagnosed and fixed broken Vercel auto-deploy — the live `reeves-estates` Vercel project (ReevesEstates team) had no git repo connected. Connected `aidansinclair/reeves-estates` and confirmed webhook auto-deploys are working. Corrected CLAUDE.md architecture — removed "single-page site" framing, documented full multi-page route structure. Resolved audit item 8 (not actually orphaned — `/services` page exists).
+
+**Unresolved — Vercel/GitHub handoff connection:**
+The `reeves-estates/website` GitHub repo (under the `reeves-estates` GitHub account, intended for client handoff to Matt Reeves) cannot currently be connected to Vercel. Vercel only sees GitHub accounts linked via OAuth, and the `reeves-estates` GitHub account has not been successfully added to Vercel despite the GitHub App being installed on it. The blocker appears to be that Vercel's "Add GitHub Account" OAuth flow requires active GitHub session switching — it didn't work while logged in as `aidansinclair`. **Resolution path:** While logged into GitHub as `reeves-estates`, click "Add GitHub Account" in Vercel Git settings, complete the OAuth flow, then reconnect the project to `reeves-estates/website`.
+
+**Current deploy setup (working):**
+- Local remote: `git@github.com:aidansinclair/reeves-estates.git`
+- Vercel project: ReevesEstates team → `reeves-estates` → connected to `aidansinclair/reeves-estates`
+- Auto-deploys on push to `main` ✓
 
 **Next up (suggested):**
 - Audit item 6: flip hero CTA hierarchy — make "Schedule a Consultation" primary (filled bronze), phone number secondary
 - Delete `CalEmbed.tsx` if confirmed unused
 - Confirm whether `feature/services-grouping` has been merged into `main` or is still open
 - Audit item 11: add pricing/commission FAQ entry
+- Resolve `reeves-estates/website` Vercel connection (see above)
 
 ## Project Overview
 
